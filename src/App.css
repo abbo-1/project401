@@ -1,0 +1,52 @@
+.App {
+    /* background-color: #282c34;  */
+  /* background-image: url('./images/just-waves.png');  */
+  background-image: url('./images/white_wave.png');
+  background-repeat: repeat;
+  display: flex;
+  /* cursor: grab;
+  overflow: auto; */
+}
+
+#shipLayout {
+  height: 98vh;
+  width: auto;
+}
+
+#welcomeMessage {
+  color:white;
+  background-color: #282c34;
+  font: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 1em;
+  border-radius: 8px;
+  padding: 2%;
+  /* display: flex; */
+  text-align: center;
+  justify-content: center;
+  opacity: 0.9;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#exploreBtn {
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #FD0000;
+  background-color: white;
+  color: black;
+
+  padding: 10px 15px;
+  margin: 4px 2px;
+}
+
+#exploreBtn:hover {
+  background-color: #FD0000;
+  color: white;
+}
