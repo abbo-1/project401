@@ -1,55 +1,52 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScrollContainer from 'react-indiana-drag-scroll';
+
+import {render} from 'react-dom'
+import {createStore, applyMiddleware} from 'redux'
+import {Provider} from 'react-redux'
+
+// import thunk from 'redux-thunk'
+// import {composeWithDevTools} from 'redux-devtools-extension'
+
 import titanic from './images/titanic2.png';
 
-// const welcomeMessage = <div id='welcomeMessage'>
-//   In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. Starting at 11:45 PM and until the ship's last moments a courageous few worked tirelessly to launch lifeboats. <br/><br/>  In the end only 712 people, less then 1/3rd of those who were on board, survived. <br/> <br/> Click on a lifeboat to learn more about those surviviors.
-//   <br/>  
-//   <button onClick={() => setDisplayComponent(null)} id="exploreBtn">Explore</button>
-//   </div>
+import reducer from './reducers/passengerList.js'
+import displayPassengers from './actions/displayPassengerLists'
 
-function App() {
-//   const [message, setMessageOff] = useState(
-//     <div id='welcomeMessage'>
-//         In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. Beginning at 11:45 PM and until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
-//         <br/><br/>  
-//         In the end only 712 people, less then 1/3rd of those who were on board, survived. 
-//         <br/> <br/> 
-//         Click on a lifeboat to learn more about those survivors.
-//         <br/>  
-//         <button onClick={() => setMessageOff(null)} id="exploreBtn">Explore</button>
-//     </div>);
-const [showMessage, setMessageOff] = useState(true);
+function App(props) {
 
-
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setMessage("asdf");
-  //   }, 10000)
-  // }
-  // )
+const [showMessage, setMessageOff] = useState(false);
+const store = createStore(reducer)
 
   return (
+      // <Provider>
+    <Provider store={store}> 
     <div className="App">
       <ScrollContainer className="scroll-container">
       {/* <header className="App-header"> */}
       {/* {message} */}
       {showMessage ? (<div id='welcomeMessage'>
-In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. Beginning at 11:45 PM and until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
-<br/><br/>  
-In the end only 712 people, less then 1/3rd of those who were on board, survived. 
-<br/> <br/> 
-Click on a lifeboat to learn more about those survivors.
-<br/>  
-<button onClick={() => setMessageOff(null)} id="exploreBtn">Explore</button>
-</div>) : true}
-      <img src={titanic} id="shipLayout" alt="ship blueprint"/>
+        In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. Beginning at 11:45 PM and until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
+        <br/><br/>  
+        In the end only 712 people, less then 1/3rd of those who were on board, survived. 
+        <br/> <br/> 
+        Click on a lifeboat to learn more about that boat's survivors.
+        <br/>  
+        <button onClick={() => setMessageOff(null)} id="exploreBtn">Explore</button>
+
+        </div>) : true}
+
+        <img src={titanic} id="shipLayout" alt="ship blueprint"/>
          {/* Click on a lifeboat to see who was on board. */}
-      {/* </header> */}
+
+         <button onClick={props.displayPassengers}>Lifeboat #1</button>
+         <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
+
+      {/* </header> */} 
       </ScrollContainer>
     </div>
+    </Provider>
   );
 }
 
