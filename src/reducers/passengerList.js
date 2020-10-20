@@ -5,11 +5,11 @@ const passengerListReducer = (state ={}, {type, payload}) => {
 
         case DISPLAY_PASSENGERS :
 
-            return {
+            return ({
                 name: "lifeboat1Passenger",
                 age: "27",
                 class: "third"
-                    }
+                    })
             return state
 
         };

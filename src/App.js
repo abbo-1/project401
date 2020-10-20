@@ -19,6 +19,10 @@ function App(props) {
 const [showMessage, setMessageOff] = useState(false);
 const store = createStore(reducer)
 
+function thin() {
+  console.log("check this out " + props.displayPassengers)
+}
+
   return (
       // <Provider>
     <Provider store={store}> 
@@ -40,7 +44,9 @@ const store = createStore(reducer)
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
          {/* Click on a lifeboat to see who was on board. */}
 
-         <button onClick={props.displayPassengers}>Lifeboat #1</button>
+         {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
+         <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button>
+         <button class="lifeboatBtn" onClick={() => {console.log("look at this" + props)}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
 
       {/* </header> */} 
