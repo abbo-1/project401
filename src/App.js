@@ -25,7 +25,8 @@ function thin() {
 
   return (
       // <Provider>
-    <Provider store={store}> 
+    // <Provider store={store}> 
+    <Provider value={passengers: 'boats'}>
     <div className="App">
       <ScrollContainer className="scroll-container">
       {/* <header className="App-header"> */}
