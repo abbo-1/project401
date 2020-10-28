@@ -3,16 +3,23 @@ import {DISPLAY_PASSENGERS} from '../actions/displayPassengerLists';
 const passengerListReducer = (state ={}, {type, payload}) => {
     switch(type) {
 
-        case DISPLAY_PASSENGERS :
+        case DISPLAY_PASSENGERS1 :
 
             return ({
                 name: "lifeboat1Passenger",
                 age: "27",
                 class: "third"
                     })
-            return state
+        case DISPLAY_PASSENGERS2 :
 
-        };
+        return ({
+            name: "lifeboat2Passenger",
+            age: "27",
+            class: "third"
+                })
+        return state
+
+    };
 
 };
     

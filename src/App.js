@@ -46,7 +46,6 @@ function thin() {
 
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
          <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button>
-         <button class="lifeboatBtn" onClick={thin()}>Lifeboat #2</button>
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
 
