@@ -4,7 +4,7 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 
 import {render} from 'react-dom'
 import {createStore, applyMiddleware} from 'redux'
-import {Provider} from 'react-redux'
+import {Provider, connect} from 'react-redux'
 
 // import thunk from 'redux-thunk'
 // import {composeWithDevTools} from 'redux-devtools-extension'
@@ -19,8 +19,19 @@ function App(props) {
 const [showMessage, setMessageOff] = useState(false);
 const store = createStore(reducer)
 
-function thin() {
-  console.log(JSON.stringify(props.displayPassengers))
+increment = () => {
+  this.props.dispatch({ type: 'INCREMENT' });
+}
+
+decrement = () => {
+  this.props.dispatch({ type: 'DECREMENT' });
+}
+
+
+function mapStateToProps(state) {
+  return {
+    count: state.count
+  };
 }
 
   return (
@@ -48,6 +59,9 @@ function thin() {
          <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button>
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
+         <button onClick={this.decrement}>-</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>+</button>
 
       {/* </header> */} 
       </ScrollContainer>
@@ -56,4 +70,4 @@ function thin() {
   );
 }
 
-export default App;
+export default connect(mapStateToProps)(App);
