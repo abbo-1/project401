@@ -24,13 +24,25 @@
 // };
 
 const initialState = {
-    count: 0
-  };
-  
-  function reducer(state = initialState, action) {
-    return state;
+    counter: 0,
   }
   
+  export const counterReducer =  (state = initialState, action) => {
+    switch (action.type) {
+      case TYPE_INCREMENT:
+        return {
+          ...state,
+          counter: state.counter + 1,
+        }
+      case TYPE_DECREMENT:
+        return {
+          ...state,
+          counter: state.counter - 1,
+        }
+      default:
+        return state
+    }
+  }
   
     
 export default passengerListReducer;
