@@ -63,6 +63,14 @@ function mapStateToProps(state) {
           <span>{this.props.count}</span>
          <button onClick={this.increment}>+</button>
 
+         <button onClick={this.decrement}>-</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>+</button>
+
+         <button onClick={this.decrement}>-</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>+</button>
+
       {/* </header> */} 
       </ScrollContainer>
     </div>
