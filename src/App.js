@@ -64,6 +64,10 @@ function mapStateToProps(state) {
           <span>{this.props.count}</span>
          <button onClick={this.increment}>Add +</button>
 
+         <button onClick={this.decrement}>Minus -</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>Add +</button>
+
 
 
       {/* </header> */} 
