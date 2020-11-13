@@ -60,6 +60,7 @@ function mapStateToProps(state) {
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
          <br/>
+         
          <button onClick={this.decrement}>Minus -</button>
           <span>{this.props.count}</span>
          <button onClick={this.increment}>Add +</button>
