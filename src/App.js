@@ -64,6 +64,14 @@ function mapStateToProps(state) {
          <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
           <span>{this.props.count}</span>
          <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
+         <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
+
+         <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
+          <span>{this.props.count}</span>
+         <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
+
 
 
 
