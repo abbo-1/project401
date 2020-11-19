@@ -32,16 +32,18 @@ const initialState = {
 
       case TYPE_INCREMENT:
         return {
+            
           ...state,
           counter: state.counter + 1,
         }
 
       case TYPE_DECREMENT:
         return {
+
           ...state,
           counter: state.counter - 1,
         }
-        
+
       default:
         return state
     }

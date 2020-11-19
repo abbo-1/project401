@@ -46,7 +46,7 @@ function mapStateToProps(state) {
         <br/><br/>  
         In the end only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 
-        Click on a lifeboat to learn more about that boat's survivors.
+        Click on a lifeboat to learn more about each boat's survivors.
         <br/>  
         <button onClick={() => setMessageOff(null)} id="exploreBtn">Explore</button>
 
@@ -64,17 +64,6 @@ function mapStateToProps(state) {
          <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
           <span>{this.props.count}</span>
          <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
-         <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
-          <span>{this.props.count}</span>
-         <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
-
-         <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
-          <span>{this.props.count}</span>
-         <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
-
-
-
-
 
       {/* </header> */} 
       </ScrollContainer>
