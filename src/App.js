@@ -57,13 +57,14 @@ function mapStateToProps(state) {
 
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
          <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button>
+         
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
                   <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
                   <div>Me: {props.lifeboat1Passenger}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
-                  <div>Ka: {props.lifeboat1Passenger}</div>
          <br/>
+
 
          <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
           <span>Person 1{this.props.count}</span>
