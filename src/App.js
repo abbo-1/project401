@@ -70,9 +70,6 @@ function mapStateToProps(state) {
           <span>Person 1{this.props.count}</span>
           <span>Person 2{this.props.count}</span>
           <span>Person 3{this.props.count}</span>
-          <span>Person 3{this.props.count}</span>
-                    <span>Person 3{this.props.count}</span>
-                    <span>Person 3{this.props.count}</span>
          <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
 
       {/* </header> */} 
