@@ -44,7 +44,7 @@ function mapStateToProps(state) {
       {showMessage ? (<div id='welcomeMessage'>
         In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. Beginning at 11:45 PM and until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
         <br/><br/>  
-        In the end only 712 people, less then 1/3rd of those who were on board, survived. 
+        By the end of the night only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 
         Click on a lifeboat to learn more about each boat's survivors.
         <br/>  

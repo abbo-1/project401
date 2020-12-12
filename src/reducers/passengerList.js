@@ -24,7 +24,7 @@
 // };
 
 const initialState = {
-    counter: 0,
+    counter: 3,
   }
   
   export const counterReducer =  (state = initialState, action) => {
@@ -32,7 +32,7 @@ const initialState = {
 
       case TYPE_INCREMENT:
         return {
-            
+
           ...state,
           counter: state.counter + 1,
         }
