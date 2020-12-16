@@ -23,31 +23,52 @@
 
 // };
 
+// const initialState = {
+//     counter: 3,
+//   }
+  
+//   export const counterReducer =  (state = initialState, action) => {
+//     switch (action.type) {
+
+//       case TYPE_INCREMENT:
+//         return {
+
+//           ...state,
+//           counter: state.counter + 1,
+//         }
+
+//       case TYPE_DECREMENT:
+//         return {
+
+//           ...state,
+//           counter: state.counter - 1,
+//         }
+
+//       default:
+//         return state
+//     }
+//   }
+
+
 const initialState = {
-    counter: 3,
+  counter: 0,
+}
+
+export const passengerListReducer =  (state = initialState, action) => {
+  switch (action.type) {
+    case TYPE_INCREMENT:
+      return {
+        ...state,
+        counter: state.counter + 1,
+      }
+    case TYPE_DECREMENT:
+      return {
+        ...state,
+        counter: state.counter - 1,
+      }
+    default:
+      return state
   }
-  
-  export const counterReducer =  (state = initialState, action) => {
-    switch (action.type) {
-
-      case TYPE_INCREMENT:
-        return {
-
-          ...state,
-          counter: state.counter + 1,
-        }
-
-      case TYPE_DECREMENT:
-        return {
-
-          ...state,
-          counter: state.counter - 1,
-        }
-
-      default:
-        return state
-    }
-  }
-  
+}
     
 export default passengerListReducer;

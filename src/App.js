@@ -6,6 +6,8 @@ import {render} from 'react-dom'
 import {createStore, applyMiddleware} from 'redux'
 import {Provider, connect} from 'react-redux'
 
+import { increment, decrement } from './actions/displayPassengerLists'
+
 // import thunk from 'redux-thunk'
 // import {composeWithDevTools} from 'redux-devtools-extension'
 
@@ -17,26 +19,11 @@ import displayPassengers from './actions/displayPassengerLists'
 function App(props) {
 
 const [showMessage, setMessageOff] = useState(false);
-const store = createStore(reducer)
-
-increment = () => {
-  this.props.dispatch({ type: 'INCREMENT' });
-}
-
-decrement = () => {
-  this.props.dispatch({ type: 'DECREMENT' });
-}
 
 
-function mapStateToProps(state) {
-  return {
-    count: state.count
-  };
-}
+
 
   return (
-      // <Provider>
-    <Provider store={store}> 
     <div className="App">
       <ScrollContainer className="scroll-container">
       {/* <header className="App-header"> */}
@@ -56,7 +43,7 @@ function mapStateToProps(state) {
          {/* Click on a lifeboat to see who was on board. */}
 
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
-         <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button>
+         {/* <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button> */}
 
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
          <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
@@ -76,8 +63,7 @@ function mapStateToProps(state) {
       {/* </header> */} 
       </ScrollContainer>
     </div>
-    </Provider>
   );
 }
 
-export default connect(mapStateToProps)(App);
+export default connect()(App);

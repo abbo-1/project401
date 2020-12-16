@@ -6,20 +6,15 @@
 //     payload: "TEST PASSENGER"
 // };
 
-function reducer(state = initialState, action) {
-    switch(action.type) {
-      case 'INCREMENT':
-        return {
-          count: state.count + 1
-        };
-      case 'DECREMENT':
-        return {
-          count: state.count - 1
-        };
-      default:
-        return state;
-    }
-  }
-  
+const TYPE_INCREMENT = 'INCREMENT'
+const TYPE_DECREMENT = 'DECREMENT'
+
+export const increment = () => ({
+  type: TYPE_INCREMENT,
+})
+
+export const decrement = () => ({
+  type: TYPE_DECREMENT,
+})
     
-export default displayPassengers;
+// export default displayPassengers;
