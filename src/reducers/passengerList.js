@@ -59,12 +59,12 @@ export const passengerListReducer =  (state = initialState, action) => {
     case TYPE_INCREMENT:
       return {
         ...state,
-        counter: state.counter + 1,
+        counter: state.counter + 2,
       }
     case TYPE_DECREMENT:
       return {
         ...state,
-        counter: state.counter - 1,
+        counter: state.counter - 2,
       }
     default:
       return state
