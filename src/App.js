@@ -54,11 +54,11 @@ const [showMessage, setMessageOff] = useState(false);
          <br/>
 
 
-         <button onClick={this.decrement}>Minus - View Lifeboat 4</button>
-          <span>Person 1{this.props.count}</span>
-          <span>Person 2{this.props.count}</span>
-          <span>Person 3{this.props.count}</span>
-         <button onClick={this.increment}>Add + - Remove Lifeboat 4</button>
+         <button onClick={decrement}>Minus - View Lifeboat 4</button>
+          <span>Person 1{props.count}</span>
+          <span>Person 2{props.count}</span>
+          <span>Person 3{props.count}</span>
+         <button onClick={increment}>Add + - Remove Lifeboat 4</button>
 
       {/* </header> */} 
       </ScrollContainer>

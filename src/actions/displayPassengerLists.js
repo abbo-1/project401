@@ -6,8 +6,9 @@
 //     payload: "TEST PASSENGER"
 // };
 
-const TYPE_INCREMENT = 'INCREMENT'
-const TYPE_DECREMENT = 'DECREMENT'
+export const TYPE_INCREMENT = 'INCREMENT'
+
+export const TYPE_DECREMENT = 'DECREMENT'
 
 export const increment = () => ({
   type: TYPE_INCREMENT,
@@ -16,5 +17,3 @@ export const increment = () => ({
 export const decrement = () => ({
   type: TYPE_DECREMENT,
 })
-    
-// export default displayPassengers;

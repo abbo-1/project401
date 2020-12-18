@@ -49,6 +49,9 @@
 //     }
 //   }
 
+import { TYPE_INCREMENT, TYPE_DECREMENT } from '../actions/displayPassengerLists'
+// import displayPassengerLists from '../actions/displayPassengerLists'
+// import { TYPE_INCREMENT, TYPE_DECREMENT } from displayPassengerLists
 
 const initialState = {
   counter: 0,
