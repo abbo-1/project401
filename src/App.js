@@ -20,9 +20,6 @@ function App(props) {
 
 const [showMessage, setMessageOff] = useState(false);
 
-
-
-
   return (
     <div className="App">
       <ScrollContainer className="scroll-container">
@@ -58,7 +55,9 @@ const [showMessage, setMessageOff] = useState(false);
           <span>Person 1{props.count}</span>
           <span>Person 2{props.count}</span>
           <span>Person 3{props.count}</span>
+          <p className="counter">Counter: </p>
          <button onClick={increment}>Add + - Remove Lifeboat 4</button>
+         <button onClick={console.log("test")}>test</button>
 
       {/* </header> */} 
       </ScrollContainer>
