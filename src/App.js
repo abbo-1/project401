@@ -57,7 +57,8 @@ const [showMessage, setMessageOff] = useState(false);
           <span>Person 3{props.count}</span>
           <p className="counter">Counter: </p>
          <button onClick={increment}>Add + - Remove Lifeboat 4</button>
-         <button onClick={console.log("test")}>test</button>
+         <button onClick={console.log("test")}>load boats test</button>
+         <button onClick={console.log("test")}>second button</button>
 
       {/* </header> */} 
       </ScrollContainer>
