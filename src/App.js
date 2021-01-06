@@ -20,6 +20,12 @@ function App(props) {
 
 const [showMessage, setMessageOff] = useState(false);
 
+// const counter = 1
+
+const initialState = {
+  counter: 0,
+}
+
   return (
     <div className="App">
       <ScrollContainer className="scroll-container">
@@ -47,18 +53,15 @@ const [showMessage, setMessageOff] = useState(false);
                   <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
                   <div>Me: {props.passengers}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
-                  <div>Ka: {props.lifeboat1Passenger}</div>
          <br/>
 
 
          <button onClick={decrement}>Minus - View Lifeboat 4</button>
-          <span>Person 1{props.count}</span>
-          <span>Person 2{props.count}</span>
-          <span>Person 3{props.count}</span>
-          <p className="counter">Counter: </p>
+          <span>Person 1{props.counter}</span>
+          <p className="counter">Counter: {initialState.counter} </p>
+          <p className="counter">Counter Emma Watson: {initialState.counter} </p>
          <button onClick={increment}>Add + - Remove Lifeboat 4</button>
-         <button onClick={console.log("test")}>load boats test</button>
-         <button onClick={console.log("test")}>second button</button>
+
 
       {/* </header> */} 
       </ScrollContainer>
