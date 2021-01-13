@@ -50,7 +50,19 @@ const initialState = {
 
          <button class="lifeboatBtn" onClick={() => {console.log(JSON.stringify(props.displayPassengers))}}>Lifeboat #2</button>
 
+         <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
+                  <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
+                  <div>Me: {props.passengers}</div>
+                  <div>Ka: {props.lifeboat1Passenger}</div>
+         <br/>
 
+
+         <button onClick={decrement}>Minus - View Lifeboat 4 Passengers</button>
+          <span>Click to learn more Person 1{props.counter}</span>
+          <p className="counter">Counter: {initialState.counter} </p>
+          {/* <p className="counter">Countermes Watson: {getState().counter} </p> */}
+         <button onClick={increment}>Add + - Remove Lifeboat 4 Passenger</button>
+         
       {/* </header> */} 
       </ScrollContainer>
     </div>
