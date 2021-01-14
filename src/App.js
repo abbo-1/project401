@@ -54,6 +54,8 @@ const initialState = {
                   <div>Surviviors of lifeboat #1 Include: {props.lifeboat1Passenger}</div>
                   <div>Me: {props.passengers}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
+                  <div>Ka: {props.lifeboat1Passenger}</div>
+                  <div>Ka: {props.lifeboat1Passenger}</div>
          <br/>
 
 
