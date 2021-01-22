@@ -56,6 +56,8 @@ const initialState = {
                   <div>Ka: {props.lifeboat1Passenger}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
+                  <div>Ka: {props.lifeboat1Passenger}</div>
+                  <div>Ka: {props.lifeboat1Passenger}</div>
          <br/>
 
 
