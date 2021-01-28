@@ -55,15 +55,14 @@ const initialState = {
                   <div>Me: {props.passengers}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
                   <div>Ka: {props.lifeboat1Passenger}</div>
-                  <div>Ka: {props.lifeboat56Passenger}</div>
-                  <div>Ka: {props.lifeboat123Passenger}</div>
-                  <div>Ka: {props.lifeboat54326Passenger}</div>
+
 \
          <br/>
 
 
          <button onClick={decrement}>Minus - View Lifeboat 4 Passengers</button>
           <span>Click to learn more Person 1{props.counter}</span>
+          <span>Click to learn more Person 44{props.counter}</span>
           <p className="counter">Counter: {initialState.counter} </p>
           {/* <p className="counter">Countermes Watson: {getState().counter} </p> */}
          <button onClick={increment}>Add + - Remove Lifeboat 4 Passenger</button>
