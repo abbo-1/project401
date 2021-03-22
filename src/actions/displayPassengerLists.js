@@ -21,7 +21,8 @@ import { useState } from 'react'
 
 function App() {
 
-const [lifeboatOne, setTasks] = useState([
+// const [lifeboatOne, setTasks] = useState([
+const lifeboatOne = (
   {
       id: 1,
       name: 'John Collins',
@@ -106,7 +107,7 @@ const [lifeboatOne, setTasks] = useState([
     age: '23',
     class: 'Crew (Engineering)',
   },
-])
+)
 
 
   return (
