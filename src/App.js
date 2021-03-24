@@ -9,6 +9,8 @@ function App(props) {
 
 const [showMessage, setMessageOff] = useState(true);
 
+const [showLifeboatInfo, setLifeboatInfoOff] = useState();
+
   return (
     <div className="App">
       <ScrollContainer className="scroll-container">
@@ -30,11 +32,26 @@ const [showMessage, setMessageOff] = useState(true);
 
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
 
-        <button onClick={() => setMessageOff(null)} 
-        id="exploreBtn">
-        Explore
+        <div>
+        <lifeboatDisplay />
+        </div>
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Lifeboat 1
         </button>
-        
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Lifeboat 2
+        </button>
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Lifeboat 3
+        </button>
+
+
          {/* Click on a lifeboat to see who was on board. */}
 
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
