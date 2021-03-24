@@ -2,29 +2,12 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
-import {render} from 'react-dom'
-import {createStore, applyMiddleware} from 'redux'
-import {Provider, connect} from 'react-redux'
-
-import { increment, decrement } from './actions/displayPassengerLists'
-
-// import thunk from 'redux-thunk'
-// import {composeWithDevTools} from 'redux-devtools-extension'
-
 import titanic from './images/titanic2.png';
 
-import reducer from './reducers/passengerList.js'
-import displayPassengers from './actions/displayPassengerLists'
 
 function App(props) {
 
-const [showMessage, setMessageOff] = useState(false);
-
-// const counter = 1
-
-const initialState = {
-  counter: 0,
-}
+const [showMessage, setMessageOff] = useState(true);
 
   return (
     <div className="App">
@@ -32,7 +15,7 @@ const initialState = {
       {/* <header className="App-header"> */}
       {/* {message} */}
       {showMessage ? (<div id='welcomeMessage'>
-        In the early hours of April 15th 1912, The RMS Titanic sank beneath the waves. From the time of collision at 11:45 PM, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
+        In the early hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 PM, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
         <br/><br/>  
         By the end of the night only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 
@@ -46,6 +29,12 @@ const initialState = {
         </div>) : true}
 
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
+
+        <button onClick={() => setMessageOff(null)} 
+        id="exploreBtn">
+        Explore
+        </button>
+        
          {/* Click on a lifeboat to see who was on board. */}
 
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
@@ -57,5 +46,4 @@ const initialState = {
   );
 }
 
-export default connect()(App);
-
+export default App;
