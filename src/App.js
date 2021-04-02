@@ -66,6 +66,17 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         Lifeboat 6
         </button>
 
+        
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Lifeboat 7
+        </button>
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Lifeboat 8
+        </button>
+
 
          {/* Click on a lifeboat to see who was on board. */}
 
