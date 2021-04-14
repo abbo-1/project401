@@ -120,6 +120,12 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         Lifeboat 16
         </button>
 
+        
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Collapsible A
+        </button>
+
         <button onClick={alert} 
         class="lifeboatBtn">
         Collapsible B
