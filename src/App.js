@@ -17,7 +17,7 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
       {/* <header className="App-header"> */}
       {/* {message} */}
       {showMessage ? (<div id='welcomeMessage'>
-        In the early hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 PM, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
+        In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 PM, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
         <br/><br/>  
         By the end of the night only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 
@@ -129,6 +129,16 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         <button onClick={alert} 
         class="lifeboatBtn">
         Collapsible B
+        </button>
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Collapsible C
+        </button>
+
+        <button onClick={alert} 
+        class="lifeboatBtn">
+        Collapsible D
         </button>
 
 
