@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import Visualizer from './components/Visualizer.js'
 import ScrollContainer from 'react-indiana-drag-scroll';
 
 import titanic from './images/titanic2.png';
@@ -35,6 +36,10 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         <div>
         <lifeboatDisplay />
         </div>
+
+        <Visualizer />
+
+        <button onClick={alert}>Visualization</button>
 
         <button onClick={alert} 
         class="lifeboatBtn">
