@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Visualizer from './components/Visualizer.js'
 import ScrollContainer from 'react-indiana-drag-scroll';
-import AppBar from '@material-ui/core/AppBar';
+// import AppBar from '@material-ui/core/AppBar';
+// import BottomNavigation from '@material-ui/core/BottomNavigation';
+import Navbar from 'react-bootstrap/Navbar';
 
 import titanic from './images/titanic2.png';
 
@@ -38,7 +40,7 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         <lifeboatDisplay />
         </div>
 
-        <AppBar position="fixed" color="primary">
+        <Navbar sticky="bottom" bg="light" id="navBar">
 
         <Visualizer />
 
@@ -54,7 +56,7 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         Lifeboat 2
         </button>
 
-        <button onClick={alert} 
+        {/* <button onClick={alert} 
         class="lifeboatBtn">
         Lifeboat 3
         </button>
@@ -147,9 +149,9 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         <button onClick={alert} 
         class="lifeboatBtn">
         Collapsible D
-        </button>
+        </button> */}
 
-        </AppBar>
+        </Navbar >
 
 
 
