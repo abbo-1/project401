@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Visualizer from './components/Visualizer.js'
 import ScrollContainer from 'react-indiana-drag-scroll';
+import AppBar from '@material-ui/core/AppBar';
 
 import titanic from './images/titanic2.png';
 
@@ -36,6 +37,8 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         <div>
         <lifeboatDisplay />
         </div>
+
+        <AppBar position="fixed" color="primary">
 
         <Visualizer />
 
@@ -145,6 +148,8 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         class="lifeboatBtn">
         Collapsible D
         </button>
+
+        </AppBar>
 
 
 
