@@ -38,8 +38,6 @@ const Visualizer = () => {
     // )}
 
 
-
-
  
 
 
@@ -47,12 +45,16 @@ const Visualizer = () => {
         <div>
 
         <div>
-            { [...Array(1493)].map((v, i) => <FaceIcon /> ) }
+            {/* { [...Array(1493)].map((v, i) => <FaceIcon /> ) } */}
+            {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
+            {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
+            {[...Array(112)].map((v, i) => <FaceIcon style={{color: "yellow"}} /> )}
+            {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
 
-            <FaceIcon style={{color: "green"}} />
-            <FaceIcon style={{color: "purple"}} />
-            <FaceIcon style={{color: "yellow"}}/>
-            {showPeople ? <FaceIcon /> : null}
+            
+
+
+            {showPeople ? [...Array(1493)].map((v, i) => <FaceIcon /> ) : null}
         </div>
 
         <Button onClick={displayIt}>turtles</Button>
