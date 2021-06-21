@@ -1,6 +1,6 @@
 import React from 'react';
 import {useState} from "react"
-import {Button} from 'react-bootstrap';
+import { Row, Col, Container, Button} from "react-bootstrap";
 import FaceIcon from '@material-ui/icons/Face';
 
 const Visualizer = () => {
@@ -37,29 +37,40 @@ const Visualizer = () => {
 
     // )}
 
+{/* 
+            {showPeople ? [...Array(1493)].map((v, i) => <FaceIcon /> ) : null}
 
- 
-
+        <Button onClick={displayIt}>turtles</Button> */}
 
     return (
         <div>
 
-        <div>
+
             {/* { [...Array(1493)].map((v, i) => <FaceIcon /> ) } */}
+            <Container>
+            <Row>
+
+            <Col sm={12} md={3}>
             {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
             {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
-            {[...Array(112)].map((v, i) => <FaceIcon style={{color: "yellow"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            {[...Array(112)].map((v, i) => <FaceIcon style={{color: "black"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
             {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
 
-            
-
-
-            {showPeople ? [...Array(1493)].map((v, i) => <FaceIcon /> ) : null}
-        </div>
-
-        <Button onClick={displayIt}>turtles</Button>
-        </div>
+            </Row>
+            </Container>
+            </div>
     )
+
 };
 
 export default Visualizer
