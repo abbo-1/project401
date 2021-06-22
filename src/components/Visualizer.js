@@ -80,25 +80,24 @@ const Visualizer = () => {
         aria-labelledby="example-custom-modal-styling-title"
         >
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-          <Container>
-              <Row>
+          <Row>
               <Col sm={12} md={6}>
                   <div>
-                      TEST TEST TEST TEST TEST TEST TEST
+                      TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
                   </div>
               </Col>
               <Col sm={12} md={6}>
               <Legend verticalAlign="top" height={36}/>
-                <PieChart width={400} height={400}>
+                <PieChart width={300} height={300}>
                     <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8" label/>
                 </PieChart>
               </Col>
+            </Row>
+          </Modal.Header>
 
+          <Modal.Body>
+          <Container>
 
-              </Row>
             <Row>
             
             <Col sm={12} md={3}>
