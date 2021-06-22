@@ -1,10 +1,15 @@
 import React from 'react';
 import {useState} from "react"
-import { Row, Col, Container, Button} from "react-bootstrap";
+import { Modal, Row, Col, Container, Button} from "react-bootstrap";
 import FaceIcon from '@material-ui/icons/Face';
 
 const Visualizer = () => {
     
+    const [show, setShow] = useState(false);
+  
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const [showPeople, setShowPeople] = useState(false);
     // const handleClosePeople = () => setShowPeople(false);
     // const handleShowPeople = () => setShowPeople(true);
@@ -44,30 +49,78 @@ const Visualizer = () => {
 
     return (
         <div>
+      <Button variant="primary" onClick={handleShow}>
+        Beep
+      </Button>
 
-
-            {/* { [...Array(1493)].map((v, i) => <FaceIcon /> ) } */}
-            <Container>
+        <Modal 
+        show={show} 
+        onHide={handleClose}
+        dialogClassName="modal-90w modal-90h"
+        aria-labelledby="example-custom-modal-styling-title"
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>Modal heading</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+          <Container>
             <Row>
-
+            
             <Col sm={12} md={3}>
+            <Modal.Title>MEN ON BOARD</Modal.Title>
             {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
             </Col>
 
             <Col sm={12} md={3}>
+            <Modal.Title>WOMEN ON BOARD</Modal.Title>
             {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
             </Col>
 
             <Col sm={12} md={3}>
-            {[...Array(112)].map((v, i) => <FaceIcon style={{color: "black"}} /> )}
+            <Modal.Title>CHILDREN ON BOARD</Modal.Title>
+            {[...Array(112)].map((v, i) => <FaceIcon style={{color: "orange"}} /> )}
             </Col>
 
             <Col sm={12} md={3}>
+            <Modal.Title>CREW ON BOARD</Modal.Title>
             {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
             </Col>
 
             </Row>
             </Container>
+              </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={handleClose}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
+      
+
+
+            {/* { [...Array(1493)].map((v, i) => <FaceIcon /> ) } */}
+            {/* // <Container>
+            // <Row>
+
+            // <Col sm={12} md={3}>
+            // {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
+            // </Col>
+
+            // <Col sm={12} md={3}>
+            // {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
+            // </Col>
+
+            // <Col sm={12} md={3}>
+            // {[...Array(112)].map((v, i) => <FaceIcon style={{color: "black"}} /> )}
+            // </Col>
+
+            // <Col sm={12} md={3}>
+            // {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            // </Col>
+
+            // </Row>
+            // </Container>
+            // </div> */}
             </div>
     )
 

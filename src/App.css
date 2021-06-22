@@ -98,3 +98,7 @@
 .men {
   color: green;
 }
+
+.modal-dialog {
+  max-width: 95%;
+}
