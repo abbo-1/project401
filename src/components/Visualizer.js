@@ -1,6 +1,7 @@
 import React from 'react';
 import {useState} from "react"
 import { Modal, Row, Col, Container, Button} from "react-bootstrap";
+import { PieChart, Pie, Legend } from 'recharts';
 import FaceIcon from '@material-ui/icons/Face';
 
 const Visualizer = () => {
@@ -29,6 +30,25 @@ const Visualizer = () => {
     const displayIt = () => {
         setShowPeople(true);;
     }
+
+    const data01 = [
+        {
+          "name": "Male Passengers",
+          "value": 805
+        },
+        {
+          "name": "Women Passengers",
+          "value": 434
+        },
+        {
+           "name": "Children Passengers",
+           "value": 112
+        },
+        {
+            "name": "Crew",
+            "value": 908
+        },
+    ]
 
     // const n = 1492
     // const tryThis = [...Array(n)].map((e, i) => <span key={i}>test</span>)
@@ -64,6 +84,21 @@ const Visualizer = () => {
           </Modal.Header>
           <Modal.Body>
           <Container>
+              <Row>
+              <Col sm={12} md={6}>
+                  <div>
+                      TEST TEST TEST TEST TEST TEST TEST
+                  </div>
+              </Col>
+              <Col sm={12} md={6}>
+              <Legend verticalAlign="top" height={36}/>
+                <PieChart width={400} height={400}>
+                    <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8" label/>
+                </PieChart>
+              </Col>
+
+
+              </Row>
             <Row>
             
             <Col sm={12} md={3}>
