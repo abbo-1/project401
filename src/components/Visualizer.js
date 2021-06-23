@@ -3,6 +3,7 @@ import {useState} from "react"
 import { Modal, Row, Col, Container, Button} from "react-bootstrap";
 import { PieChart, Pie, Legend } from 'recharts';
 import FaceIcon from '@material-ui/icons/Face';
+import { CreateTwoTone } from '@material-ui/icons';
 
 const Visualizer = () => {
     
@@ -31,18 +32,35 @@ const Visualizer = () => {
         setShowPeople(true);;
     }
 
-    const data01 = [
+    const genderData = [
         {
           "name": "Male Passengers",
-          "value": 805
+          "value": 1690
+        //   885 Male Crew, 805 Male Passengers
         },
         {
-          "name": "Women Passengers",
-          "value": 434
+          "name": "Female Passengers",
+          "value": 457
+        //   23 Female Crew, 434 Female Passengers 
         },
         {
-           "name": "Children Passengers",
+           "name": "Child Passengers",
            "value": 112
+        },
+    ]
+
+    const classData = [
+        {
+          "name": "First Class",
+          "value": 324
+        },
+        {
+          "name": "Second Class",
+          "value": 284
+        },
+        {
+           "name": "Third Class",
+           "value": 709
         },
         {
             "name": "Crew",
@@ -89,7 +107,45 @@ const Visualizer = () => {
               <Col sm={12} md={6}>
               <Legend verticalAlign="top" height={36}/>
                 <PieChart width={300} height={300}>
-                    <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={100} fill="#8884d8" label/>
+                    <Pie 
+                    data={genderData} 
+                    dataKey="value" 
+                    nameKey="name" 
+                    cx="50%" 
+                    cy="50%" 
+                    outerRadius={100} 
+                    fill="#8884d8" 
+                    label={({
+                        cx,
+                        cy,
+                        midAngle,
+                        innerRadius,
+                        outerRadius,
+                        value,
+                        index
+                      }) => {
+                        console.log("handling label?");
+                        const RADIAN = Math.PI / 180;
+                        // eslint-disable-next-line
+                        const radius = 25 + innerRadius + (outerRadius - innerRadius);
+                        // eslint-disable-next-line
+                        const x = cx + radius * Math.cos(-midAngle * RADIAN);
+                        // eslint-disable-next-line
+                        const y = cy + radius * Math.sin(-midAngle * RADIAN);
+              
+                        return (
+                          <text
+                            x={x}
+                            y={y}
+                            fill="#8884d8"
+                            textAnchor={x > cx ? "start" : "end"}
+                            dominantBaseline="central"
+                          >
+                            {genderData[index].name} : ({value})
+                          </text>
+                        );
+                      }}
+                    />
                 </PieChart>
               </Col>
             </Row>
@@ -113,6 +169,29 @@ const Visualizer = () => {
             <Col sm={12} md={3}>
             <Modal.Title>CHILDREN ON BOARD</Modal.Title>
             {[...Array(112)].map((v, i) => <FaceIcon style={{color: "orange"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>CREW ON BOARD</Modal.Title>
+            {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            </Row>
+            <Row>
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>FIRST CLASS</Modal.Title>
+            {[...Array(324)].map((v, i) => <FaceIcon style={{color: "yellow"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>SECOND CLASS</Modal.Title>
+            {[...Array(284)].map((v, i) => <FaceIcon style={{color: "pink"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>THIRD CLASS</Modal.Title>
+            {[...Array(709)].map((v, i) => <FaceIcon style={{color: "red"}} /> )}
             </Col>
 
             <Col sm={12} md={3}>
