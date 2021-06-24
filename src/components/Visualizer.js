@@ -101,7 +101,7 @@ const Visualizer = () => {
           <Row>
               <Col sm={12} md={6}>
                   <div>
-                      TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST
+                      Over 2200 people were on board during Titanic's maiden voyage. In an effort to illustrate the wide range of genders, religions, and backgrounds represented please use the buttons below.
                   </div>
               </Col>
               <Col sm={12} md={6}>
@@ -148,6 +148,12 @@ const Visualizer = () => {
                     />
                 </PieChart>
               </Col>
+            </Row>
+            <Row>
+                <Button>BY GENDER</Button>
+                <Button>BY CLASS</Button>
+                <Button>BY COUNTRY OF ORIGIN</Button>
+                <Button>BY AGE</Button>
             </Row>
           </Modal.Header>
 
@@ -198,6 +204,140 @@ const Visualizer = () => {
             <Modal.Title>CREW ON BOARD</Modal.Title>
             {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
             </Col>
+
+            </Row>
+            <Row>
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>UNITED KINGDOM</Modal.Title>
+            {[...Array(434)].map((v, i) => <FaceIcon style={{color: "yellow"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>AMERICA</Modal.Title>
+            {[...Array(203)].map((v, i) => <FaceIcon style={{color: "pink"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>NORTHERN EUROPE</Modal.Title>
+            {[...Array(132)].map((v, i) => <FaceIcon style={{color: "red"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>MIDDLE EAST</Modal.Title>
+            {[...Array(87)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>WESTERN EUROPE</Modal.Title>
+            {[...Array(33)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>EASTERN EUROPE</Modal.Title>
+            {[...Array(20)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>SOUTHERN EUROPE</Modal.Title>
+            {[...Array(10)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>ASIA-PACIFIC</Modal.Title>
+            {[...Array(8)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>AFRICA</Modal.Title>
+            {[...Array(7)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+
+            </Row>
+
+            <Row>
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>0-4 YEARS OLD</Modal.Title>
+            {[...Array(54)].map((v, i) => <FaceIcon style={{color: "yellow"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>5-9 YEARS OLD</Modal.Title>
+            {[...Array(38)].map((v, i) => <FaceIcon style={{color: "pink"}}/> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>10-14 YEARS OLD</Modal.Title>
+            {[...Array(30)].map((v, i) => <FaceIcon style={{color: "red"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>15-19 YEARS OLD</Modal.Title>
+            {[...Array(153)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>20-24 YEARS OLD</Modal.Title>
+            {[...Array(259)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>25-29 YEARS OLD</Modal.Title>
+            {[...Array(203)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>30-34 YEARS OLD</Modal.Title>
+            {[...Array(150)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>35-39 YEARS OLD</Modal.Title>
+            {[...Array(132)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>40-44 YEARS OLD</Modal.Title>
+            {[...Array(89)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>45-49 YEARS OLD</Modal.Title>
+            {[...Array(91)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>50-54 YEARS OLD</Modal.Title>
+            {[...Array(41)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            <Col sm={12} md={3}>
+            <Modal.Title>55-59 YEARS OLD</Modal.Title>
+            {[...Array(34)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+            
+            <Col sm={12} md={3}>
+            <Modal.Title>60-64 YEARS OLD</Modal.Title>
+            {[...Array(30)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+                        
+            <Col sm={12} md={3}>
+            <Modal.Title>65-69 YEARS OLD</Modal.Title>
+            {[...Array(7)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+                                    
+            <Col sm={12} md={3}>
+            <Modal.Title>70 YEARS OLD AND OLDER</Modal.Title>
+            {[...Array(6)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
+            </Col>
+
+
+
 
             </Row>
             </Container>
