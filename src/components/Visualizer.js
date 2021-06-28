@@ -149,12 +149,14 @@ const Visualizer = () => {
                 </PieChart>
               </Col>
             </Row>
+            <Col>
             <Row>
-                <Button>BY GENDER</Button>
-                <Button>BY CLASS</Button>
-                <Button>BY COUNTRY OF ORIGIN</Button>
-                <Button>BY AGE</Button>
+                <Button sm={12} md={3}>BY GENDER</Button>
+                <Button sm={12} md={3}>BY CLASS</Button>
+                <Button sm={12} md={3}>BY COUNTRY OF ORIGIN</Button>
+                <Button sm={12} md={3}>BY AGE</Button>
             </Row>
+            </Col>
           </Modal.Header>
 
           <Modal.Body>
