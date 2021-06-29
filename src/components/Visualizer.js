@@ -154,7 +154,8 @@ const Visualizer = () => {
                 <Button sm={12} md={3}>BY GENDER</Button>
                 <Button sm={12} md={3}>BY CLASS</Button>
                 <Button sm={12} md={3}>BY COUNTRY OF ORIGIN</Button>
-                <Button sm={12} md={3}>BY AGE</Button>
+                <Button sm={12} md={3}>BY AGE RANGE</Button>
+                <Button sm={12} md={3}>BY AGE RANGE</Button>
             </Row>
             </Col>
           </Modal.Header>
