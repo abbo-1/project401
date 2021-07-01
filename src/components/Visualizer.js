@@ -68,6 +68,33 @@ const Visualizer = () => {
         },
     ]
 
+    const ageData = [
+        {
+          "name": "0-4 Years Old",
+          "value": 54
+        },
+        {
+          "name": "5-9 Years Old",
+          "value": 38
+        },
+        {
+           "name": "10-14 Years Old",
+           "value": 30
+        },
+        {
+            "name": "15-19 Years Old",
+            "value": 153
+        },
+        {
+            "name": "20-24 Years Old",
+            "value": 259
+        },
+        {
+            "name": "25-29 Years Old",
+            "value": 203
+        },
+    ]
+
     // const n = 1492
     // const tryThis = [...Array(n)].map((e, i) => <span key={i}>test</span>)
 
@@ -155,7 +182,7 @@ const Visualizer = () => {
                 <Button sm={12} md={3}>BY CLASS</Button>
                 <Button sm={12} md={3}>BY COUNTRY OF ORIGIN</Button>
                 <Button sm={12} md={3}>BY AGE RANGE</Button>
-                <Button sm={12} md={3}>BY AGE RANGE</Button>
+                <Button sm={12} md={3}>BY METRIC</Button>
             </Row>
             </Col>
           </Modal.Header>
@@ -351,33 +378,7 @@ const Visualizer = () => {
             </Button>
           </Modal.Footer>
         </Modal>
-      
-
-
-            {/* { [...Array(1493)].map((v, i) => <FaceIcon /> ) } */}
-            {/* // <Container>
-            // <Row>
-
-            // <Col sm={12} md={3}>
-            // {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
-            // </Col>
-
-            // <Col sm={12} md={3}>
-            // {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
-            // </Col>
-
-            // <Col sm={12} md={3}>
-            // {[...Array(112)].map((v, i) => <FaceIcon style={{color: "black"}} /> )}
-            // </Col>
-
-            // <Col sm={12} md={3}>
-            // {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
-            // </Col>
-
-            // </Row>
-            // </Container>
-            // </div> */}
-            </div>
+        </div>
     )
 
 };
