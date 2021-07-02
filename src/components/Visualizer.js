@@ -109,6 +109,26 @@ const Visualizer = () => {
             "name": "45-49 Years Old",
             "value": 91
         },
+        {
+            "name": "50-54 Years Old",
+            "value": 41
+        },
+        {
+            "name": "55-59 Years Old",
+            "value": 34
+        },
+        {
+            "name": "60-64 Years Old",
+            "value": 30
+        },
+        {
+            "name": "65-69 Years Old",
+            "value": 7
+        },
+        {
+            "name": "70+ Years Old",
+            "value": 6
+        },
     ]
 
     // const n = 1492
