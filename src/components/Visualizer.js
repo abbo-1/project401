@@ -131,6 +131,21 @@ const Visualizer = () => {
         },
     ]
 
+    const originData = [
+        {
+          "name": "United Kingdom",
+          "value": 434
+        },
+        {
+          "name": "America",
+          "value": 203
+        },
+        {
+            "name": "Northern Europe",
+            "value": 132
+        },
+    ]
+
     // const n = 1492
     // const tryThis = [...Array(n)].map((e, i) => <span key={i}>test</span>)
 
