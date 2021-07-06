@@ -144,6 +144,18 @@ const Visualizer = () => {
             "name": "Northern Europe",
             "value": 132
         },
+        {
+            "name": "Middle East",
+            "value": 87
+        },
+        {
+            "name": "Western Europe",
+            "value": 33
+        },
+        {
+            "name": "Eastern Europe",
+            "value": 20
+        },
     ]
 
     // const n = 1492
