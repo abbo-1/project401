@@ -156,6 +156,18 @@ const Visualizer = () => {
             "name": "Eastern Europe",
             "value": 20
         },
+        {
+            "name": "Southern Europe",
+            "value": 10
+        },
+        {
+            "name": "Asia-Pacific",
+            "value": 8
+        },
+        {
+            "name": "Africa",
+            "value": 7
+        },
     ]
 
     // const n = 1492
