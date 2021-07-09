@@ -187,6 +187,9 @@ const Visualizer = () => {
 
         <Button onClick={displayIt}>turtles</Button> */}
 
+        
+const [showAge, setShowAgeOff] = useState(false);
+
     return (
         <div>
       <Button variant="primary" onClick={handleShow}>
@@ -252,12 +255,11 @@ const Visualizer = () => {
               </Col>
             </Row>
             <Col>
-            <Row>
-                <Button sm={12} md={3}>BY GENDER</Button>
+            <Row>   
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)>BY GENDER</Button>
                 <Button sm={12} md={3}>BY CLASS</Button>
                 <Button sm={12} md={3}>BY COUNTRY OF ORIGIN</Button>
                 <Button sm={12} md={3}>BY AGE RANGE</Button>
-                <Button sm={12} md={3}>BY METRIC</Button>
             </Row>
             </Col>
           </Modal.Header>
@@ -440,8 +442,6 @@ const Visualizer = () => {
             <Modal.Title>70 YEARS OLD AND OLDER</Modal.Title>
             {[...Array(6)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
             </Col>
-
-
 
 
             </Row>
