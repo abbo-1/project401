@@ -206,7 +206,7 @@ const [showAge, setShowAgeOff] = useState(false);
           <Row>
               <Col sm={12} md={6}>
                   <div>
-                      Over 2200 people were on board during Titanic's maiden voyage. In an effort to illustrate the wide range of genders, religions, and backgrounds represented please use the buttons below.
+                      Over 2200 people were on board during Titanic's maiden voyage. In an effort to illustrate the range and proportion of genders, religions, and backgrounds represented please use the buttons below.
                   </div>
               </Col>
               <Col sm={12} md={6}>
@@ -256,10 +256,10 @@ const [showAge, setShowAgeOff] = useState(false);
             </Row>
             <Col>
             <Row>   
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)>BY GENDER</Button>
-                <Button sm={12} md={3}>BY CLASS</Button>
-                <Button sm={12} md={3}>BY COUNTRY OF ORIGIN</Button>
-                <Button sm={12} md={3}>BY AGE RANGE</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY GENDER</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
             </Row>
             </Col>
           </Modal.Header>
