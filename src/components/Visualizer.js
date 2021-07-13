@@ -260,6 +260,11 @@ const [showAge, setShowAgeOff] = useState(false);
                 <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
                 <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
                 <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
+
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY GENDER</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
+                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
             </Row>
             </Col>
           </Modal.Header>
