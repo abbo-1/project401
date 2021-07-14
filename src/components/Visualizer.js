@@ -32,6 +32,7 @@ const Visualizer = () => {
         setShowPeople(true);;
     }
 
+
     const genderData = [
         {
           "name": "Male Passengers",
@@ -65,6 +66,108 @@ const Visualizer = () => {
         {
             "name": "Crew",
             "value": 908
+        },
+    ]
+
+    const ageData = [
+        {
+          "name": "0-4 Years Old",
+          "value": 54
+        },
+        {
+          "name": "5-9 Years Old",
+          "value": 38
+        },
+        {
+           "name": "10-14 Years Old",
+           "value": 30
+        },
+        {
+            "name": "15-19 Years Old",
+            "value": 153
+        },
+        {
+            "name": "20-24 Years Old",
+            "value": 259
+        },
+        {
+            "name": "25-29 Years Old",
+            "value": 203
+        },
+        {
+            "name": "30-34 Years Old",
+            "value": 150
+        },
+        {
+            "name": "35-39 Years Old",
+            "value": 132
+        },
+        {
+            "name": "40-44 Years Old",
+            "value": 89
+        },
+        {
+            "name": "45-49 Years Old",
+            "value": 91
+        },
+        {
+            "name": "50-54 Years Old",
+            "value": 41
+        },
+        {
+            "name": "55-59 Years Old",
+            "value": 34
+        },
+        {
+            "name": "60-64 Years Old",
+            "value": 30
+        },
+        {
+            "name": "65-69 Years Old",
+            "value": 7
+        },
+        {
+            "name": "70+ Years Old",
+            "value": 6
+        },
+    ]
+
+    const originData = [
+        {
+          "name": "United Kingdom",
+          "value": 434
+        },
+        {
+          "name": "America",
+          "value": 203
+        },
+        {
+            "name": "Northern Europe",
+            "value": 132
+        },
+        {
+            "name": "Middle East",
+            "value": 87
+        },
+        {
+            "name": "Western Europe",
+            "value": 33
+        },
+        {
+            "name": "Eastern Europe",
+            "value": 20
+        },
+        {
+            "name": "Southern Europe",
+            "value": 10
+        },
+        {
+            "name": "Asia-Pacific",
+            "value": 8
+        },
+        {
+            "name": "Africa",
+            "value": 7
         },
     ]
 
@@ -261,10 +364,7 @@ const [showAge, setShowAgeOff] = useState(false);
                 <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
                 <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
 
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY GENDER</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
+    
             </Row>
             </Col>
           </Modal.Header>
