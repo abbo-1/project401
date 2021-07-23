@@ -27,6 +27,12 @@ const Visualizer = () => {
     //     }
     // }
 
+    function lifeboat(arr) {
+      for (var i = 0; i < arr.length; i++) {
+        displayIt
+      }
+    }
+
 
     const displayIt = () => {
         setShowPeople(true);
