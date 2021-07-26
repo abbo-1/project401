@@ -33,6 +33,9 @@ const Visualizer = () => {
       }
     }
 
+    const lifeboat = 0
+    do {lifeboat + 1} while {lifeboat < 1502}
+
 
     const displayIt = () => {
         setShowPeople(true);
