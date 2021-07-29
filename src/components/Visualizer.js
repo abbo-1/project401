@@ -77,6 +77,24 @@ const Visualizer = () => {
       },
   ]
 
+  
+  const genderData = [
+    {
+      "name": "Male Passengers",
+      "value": 1690
+    //   885 Male Crew, 805 Male Passengers
+    },
+    {
+      "name": "Female Passengers",
+      "value": 457
+    //   23 Female Crew, 434 Female Passengers 
+    },
+    {
+       "name": "Child Passengers",
+       "value": 112
+    },
+]
+
     const classData = [
         {
           "name": "First Class",
