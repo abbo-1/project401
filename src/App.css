@@ -102,3 +102,7 @@
 .modal-dialog {
   max-width: 95%;
 }
+
+.btn-primary {
+  margin: 5px;
+}

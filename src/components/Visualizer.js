@@ -27,21 +27,6 @@ const Visualizer = () => {
     //     }
     // }
 
-    function lifeboat(arr) {
-      for (var i = 0; i < arr.length; i++) {
-        displayIt
-      }
-    }
-
-    const lifeboat = 0
-    do {lifeboat + 1} while {lifeboat < 1502}
-
-
-    const displayIt = () => {
-        setShowPeople(true);
-    }
-
-
 
     const genderData = [
         {
@@ -59,60 +44,6 @@ const Visualizer = () => {
            "value": 112
         },
     ]
-
-    const genderData = [
-      {
-        "name": "Male Passengers",
-        "value": 1690
-      //   885 Male Crew, 805 Male Passengers
-      },
-      {
-        "name": "Female Passengers",
-        "value": 457
-      //   23 Female Crew, 434 Female Passengers 
-      },
-      {
-         "name": "Child Passengers",
-         "value": 112
-      },
-  ]
-
-  
-  const genderData = [
-    {
-      "name": "Male Passengers",
-      "value": 1690
-    //   885 Male Crew, 805 Male Passengers
-    },
-    {
-      "name": "Female Passengers",
-      "value": 457
-    //   23 Female Crew, 434 Female Passengers 
-    },
-    {
-       "name": "Child Passengers",
-       "value": 112
-    },
-]
-
-
-  
-const genderData = [
-  {
-    "name": "Male Passengers",
-    "value": 1690
-  //   885 Male Crew, 805 Male Passengers
-  },
-  {
-    "name": "Female Passengers",
-    "value": 457
-  //   23 Female Crew, 434 Female Passengers 
-  },
-  {
-     "name": "Child Passengers",
-     "value": 112
-  },
-]
 
     const classData = [
         {
@@ -321,10 +252,10 @@ const [showAge, setShowAgeOff] = useState(false);
             </Row>
             <Col>
             <Row>   
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY GENDER</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
-                <Button sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
+                <Button class="demoBtns" sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY GENDER</Button>
+                <Button class="demoBtns" sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY CLASS</Button>
+                <Button class="demoBtns" sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY COUNTRY OF ORIGIN</Button>
+                <Button class="demoBtns" sm={12} md={3} onClick={() => setShowAgeOff(true)}>BY AGE RANGE</Button>
 
     
             </Row>
