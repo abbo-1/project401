@@ -127,6 +127,90 @@ const Visualizer = () => {
         },
     ]
 
+    
+    const classData = [
+      {
+        "name": "First Class",
+        "value": 324
+      },
+      {
+        "name": "Second Class",
+        "value": 284
+      },
+      {
+         "name": "Third Class",
+         "value": 709
+      },
+      {
+          "name": "Crew",
+          "value": 908
+      },
+  ]
+
+  const ageData = [
+      {
+        "name": "0-4 Years Old",
+        "value": 54
+      },
+      {
+        "name": "5-9 Years Old",
+        "value": 38
+      },
+      {
+         "name": "10-14 Years Old",
+         "value": 30
+      },
+      {
+          "name": "15-19 Years Old",
+          "value": 153
+      },
+      {
+          "name": "20-24 Years Old",
+          "value": 259
+      },
+      {
+          "name": "25-29 Years Old",
+          "value": 203
+      },
+      {
+          "name": "30-34 Years Old",
+          "value": 150
+      },
+      {
+          "name": "35-39 Years Old",
+          "value": 132
+      },
+      {
+          "name": "40-44 Years Old",
+          "value": 89
+      },
+      {
+          "name": "45-49 Years Old",
+          "value": 91
+      },
+      {
+          "name": "50-54 Years Old",
+          "value": 41
+      },
+      {
+          "name": "55-59 Years Old",
+          "value": 34
+      },
+      {
+          "name": "60-64 Years Old",
+          "value": 30
+      },
+      {
+          "name": "65-69 Years Old",
+          "value": 7
+      },
+      {
+          "name": "70+ Years Old",
+          "value": 6
+      },
+  ]
+
+
     const originData = [
         {
           "name": "United Kingdom",
