@@ -15,6 +15,15 @@ const [showMessage, setMessageOff] = useState(true);
 
 const [showLifeboatInfo, setLifeboatInfoOff] = useState();
 
+state = {
+  counters: [
+    { id: 1, value: 0 },
+    { id: 2, value: 0 },
+    { id: 3, value: 0 },
+    { id: 4, value: 0 }
+  ]
+};
+
 handleIncrement = counter => {
   const counters = [...this.state.counters];
   const index = counters.indexOf(counter);
