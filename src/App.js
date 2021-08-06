@@ -15,6 +15,10 @@ const [showMessage, setMessageOff] = useState(true);
 
 const [showLifeboatInfo, setLifeboatInfoOff] = useState();
 
+function number(min, max) {
+  return Math.floor()(Math.random() * (max - min + 1) + 1)
+}
+
   return (
     <div className="App">
       <ScrollContainer className="scroll-container">
