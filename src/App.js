@@ -15,9 +15,22 @@ const [showMessage, setMessageOff] = useState(true);
 
 const [showLifeboatInfo, setLifeboatInfoOff] = useState();
 
-function number(min, max) {
-  return Math.floor()(Math.random() * (max - min + 1) + 1)
-}
+handleIncrement = counter => {
+  const counters = [...this.state.counters];
+  const index = counters.indexOf(counter);
+  counters[index] = { ...counters[index] };
+  counters[index].value++;
+  this.setState({ counters });
+};
+
+handleDecrement = counter => {
+  const counters = [...this.state.counters];
+  const index = counters.indexOf(counter);
+  counters[index] = { ...counters[index] };
+  counters[index].value--;
+  this.setState({ counters });
+};
+
 
   return (
     <div className="App">
