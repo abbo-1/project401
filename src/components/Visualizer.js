@@ -13,20 +13,6 @@ const Visualizer = () => {
     const handleShow = () => setShow(true);
 
     const [showPeople, setShowPeople] = useState(false);
-    // const handleClosePeople = () => setShowPeople(false);
-    // const handleShowPeople = () => setShowPeople(true);
-
-    // const displayPpl = () => {
-    //     <FaceIcon />
-    // }
-
-    // const PeopleCounter = ({n}) => {
-    //     let people = []
-    //     for (let i = 0; i < n; ++i) {
-    //         people.push(<FaceIcon />)
-    //     }
-    // }
-
 
     const genderData = [
         {
@@ -167,25 +153,7 @@ const Visualizer = () => {
             "value": 7
         },
     ]
-
-    // const n = 1492
-    // const tryThis = [...Array(n)].map((e, i) => <span key={i}>test</span>)
-
-
-
-    // const personIcon = () => {
-    // [...Array(1493)].map((elementInArray, i) => ( 
-    // <div key={i}> Whatever needs to be rendered repeatedly </div> 
-    // ) 
-
-    // )}
-
-{/* 
-            {showPeople ? [...Array(1493)].map((v, i) => <FaceIcon /> ) : null}
-
-        <Button onClick={displayIt}>turtles</Button> */}
-
-        
+   
 const [showAge, setShowAgeOff] = useState(false);
 
     return (
