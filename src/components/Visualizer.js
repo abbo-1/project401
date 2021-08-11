@@ -237,25 +237,33 @@ const [showAge, setShowAgeOff] = useState(false);
 
             <Row>
             
+            <div>
             <Col sm={12} md={3}>
             <Modal.Title>MEN ON BOARD</Modal.Title>
             {[...Array(805)].map((v, i) => <FaceIcon style={{color: "green"}}/> )}
             </Col>
-
+            </div>
+              
+            <div>
             <Col sm={12} md={3}>
             <Modal.Title>WOMEN ON BOARD</Modal.Title>
             {[...Array(434)].map((v, i) => <FaceIcon style={{color: "purple"}}/> )}
             </Col>
-
+            </div>
+            
+            <div>
             <Col sm={12} md={3}>
             <Modal.Title>CHILDREN ON BOARD</Modal.Title>
             {[...Array(112)].map((v, i) => <FaceIcon style={{color: "orange"}} /> )}
             </Col>
+            </div>
 
+            <div>
             <Col sm={12} md={3}>
             <Modal.Title>CREW ON BOARD</Modal.Title>
             {[...Array(908)].map((v, i) => <FaceIcon style={{color: "blue"}} /> )}
             </Col>
+            </div>
 
             </Row>
             <Row>
