@@ -153,6 +153,17 @@ const Visualizer = () => {
             "value": 7
         },
     ]
+
+    function iterate(minNum, maxNum) {
+      if (minNum === maxNum) {
+        return [] } 
+        else {
+          const arr = iterate (minNum, maxNum - 1)
+          arr.upshift(maxNum)
+          return arr
+        }
+      }
+    }
    
 const [showAge, setShowAgeOff] = useState(false);
 
