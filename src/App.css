@@ -3,6 +3,8 @@
   /* background-image: url('./images/just-waves.png');  */
   background-image: url('./images/white_wave.png');
   background-repeat: repeat;
+  background-size: cover;
+  height: 100%; 
   display: flex;
   /* cursor: grab;
   overflow: auto; */
@@ -105,4 +107,20 @@
 
 .btn-primary {
   margin: 5px;
+}
+
+#sliderSize {
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+
+  width: 50%;
+
+  color:white;
+  background-color: #282c34;
+  font: "Trebuchet MS", Helvetica, sans-serif;
+  border-radius: 8px;
+  border: 2px solid #FD0000;
+  padding: 10px;
+  margin-top: 2%;
 }

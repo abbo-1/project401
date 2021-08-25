@@ -163,7 +163,7 @@ const Visualizer = () => {
           return arr
         }
       }
-    }
+
    
 const [showAge, setShowAgeOff] = useState(false);
 

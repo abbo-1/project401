@@ -5,6 +5,12 @@ import ScrollContainer from 'react-indiana-drag-scroll';
 // import AppBar from '@material-ui/core/AppBar';
 // import BottomNavigation from '@material-ui/core/BottomNavigation';
 import Navbar from 'react-bootstrap/Navbar';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+import Drawer from '@material-ui/core/Drawer';
+
+import Button from '@material-ui/core/Button';
 
 import titanic from './images/titanic2.png';
 
@@ -14,6 +20,63 @@ function App(props) {
 const [showMessage, setMessageOff] = useState(true);
 
 const [showLifeboatInfo, setLifeboatInfoOff] = useState();
+
+const [state, setState] = React.useState({
+  top: false,
+});
+
+const toggleDrawer = (anchor, open) => (event) => {
+  if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+    return;
+  }
+
+  setState({ ...state, [anchor]: open });
+};
+
+const list = (anchor) => (
+  <div
+    role="presentation"
+    onClick={toggleDrawer(anchor, false)}
+    onKeyDown={toggleDrawer(anchor, false)}
+  >
+    <div id="sliderSize">
+        <Typography id="discrete-slider-small-steps" gutterBottom>
+        Small steps
+        </Typography>
+        <Slider
+          defaultValue={0.00000005}
+          // getAriaValueText={valuetext}
+          valueLabelDisplay="on"
+          aria-labelledby="discrete-slider-small-steps"
+          step={0.00000001}
+          marks={marks}
+          min={-0.00000005}
+          max={0.0000001}
+        />
+        </div>
+
+  </div>
+);
+
+
+const marks = [
+  {
+    value: 0,
+    label: '0°C',
+  },
+  {
+    value: 20,
+    label: '20°C',
+  },
+  {
+    value: 37,
+    label: '37°C',
+  },
+  {
+    value: 100,
+    label: '100°C',
+  },
+];
 
   return (
     <div className="App">
@@ -33,6 +96,17 @@ const [showLifeboatInfo, setLifeboatInfoOff] = useState();
         </button>
 
         </div>) : true}
+
+        <div>
+      {['TIME'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+    </div>
 
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
 
