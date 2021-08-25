@@ -4,6 +4,7 @@ import Visualizer from './components/Visualizer.js'
 import ScrollContainer from 'react-indiana-drag-scroll';
 // import AppBar from '@material-ui/core/AppBar';
 // import BottomNavigation from '@material-ui/core/BottomNavigation';
+import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Navbar from 'react-bootstrap/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
@@ -62,19 +63,19 @@ const list = (anchor) => (
 const marks = [
   {
     value: 0,
-    label: '0°C',
+    label: '11:40PM',
   },
   {
-    value: 20,
-    label: '20°C',
+    value: 2,
+    label: '12:00AM',
   },
   {
-    value: 37,
-    label: '37°C',
+    value: 3,
+    label: '12:30AM',
   },
   {
-    value: 100,
-    label: '100°C',
+    value: 4,
+    label: '1:00AM',
   },
 ];
 
@@ -97,16 +98,18 @@ const marks = [
 
         </div>) : true}
 
+        
         <div>
-      {['TIME'].map((anchor) => (
+    
+        {[' '].map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
           </Drawer>
         </React.Fragment>
-      ))}
-    </div>
+        ))}
+        </div>
 
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
 

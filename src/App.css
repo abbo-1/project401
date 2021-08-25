@@ -124,3 +124,13 @@
   padding: 10px;
   margin-top: 2%;
 }
+
+#downIcon {
+  font-size: 3.0rem;
+  position: fixed;
+}
+
+#downIcon:hover {
+   color:#FD0000;
+   cursor: pointer;
+}
