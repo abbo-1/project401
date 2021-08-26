@@ -34,6 +34,12 @@ const toggleDrawer = (anchor, open) => (event) => {
   setState({ ...state, [anchor]: open });
 };
 
+function valuetext(value) {
+  return `${value}nuts`;
+}
+
+
+
 const list = (anchor) => (
   <div
     role="presentation"
@@ -42,11 +48,11 @@ const list = (anchor) => (
   >
     <div id="sliderSize">
         <Typography id="discrete-slider-small-steps" gutterBottom>
-        Small steps
+        Titanic, April 14th-15th 1912
         </Typography>
         <Slider
           defaultValue={0.00000005}
-          // getAriaValueText={valuetext}
+          getAriaValueText={valuetext}
           valueLabelDisplay="on"
           aria-labelledby="discrete-slider-small-steps"
           step={0.00000001}
@@ -62,19 +68,19 @@ const list = (anchor) => (
 
 const marks = [
   {
-    value: 0,
+    value: 1140,
     label: '11:40PM',
   },
   {
-    value: 2,
+    value: 1200,
     label: '12:00AM',
   },
   {
-    value: 3,
+    value: 1230,
     label: '12:30AM',
   },
   {
-    value: 4,
+    value: 100,
     label: '1:00AM',
   },
 ];
