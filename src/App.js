@@ -8,8 +8,10 @@ import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import Navbar from 'react-bootstrap/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import Slider from '@material-ui/core/Slider';
+// import Slider from '@material-ui/core/Slider';
 import Drawer from '@material-ui/core/Drawer';
+
+import Slider from 'react-toolbox/lib/slider';
 
 import Button from '@material-ui/core/Button';
 
@@ -38,7 +40,17 @@ function valuetext(value) {
   return `${value}nuts`;
 }
 
+state = {
+  slider2: 5,
+  slider3: 1,
+  slider4: 3
+};
 
+function handleChange(slider, value) {
+  const newState = {};
+  newState[slider] = value;
+  setState(newState);
+};
 
 const list = (anchor) => (
   <div
@@ -50,7 +62,7 @@ const list = (anchor) => (
         <Typography id="discrete-slider-small-steps" gutterBottom>
         Titanic, April 14th-15th 1912
         </Typography>
-        <Slider
+        {/* <Slider
           defaultValue={0.00000005}
           getAriaValueText={valuetext}
           valueLabelDisplay="on"
@@ -59,6 +71,12 @@ const list = (anchor) => (
           marks={marks}
           min={-0.00000005}
           max={0.0000001}
+        /> */}
+        <Slider 
+          min={0} 
+          max={10} 
+          editable value={state.slider2} 
+          onChange={handleChange.bind(this, 'slider2')} 
         />
         </div>
 
