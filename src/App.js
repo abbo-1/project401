@@ -41,9 +41,7 @@ function valuetext(value) {
 }
 
 state = {
-  slider2: 5,
-  slider3: 1,
-  slider4: 3
+  slider3: 1
 };
 
 function handleChange(slider, value) {
@@ -73,8 +71,8 @@ const list = (anchor) => (
           max={0.0000001}
         /> */}
         <Slider 
-          min={0} 
-          max={10} 
+          min={1} 
+          max={11} 
           editable value={state.slider2} 
           onChange={handleChange.bind(this, 'slider2')} 
         />
