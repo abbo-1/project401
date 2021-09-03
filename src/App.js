@@ -35,6 +35,15 @@ function App(props) {
 
     setState({ ...state, [anchor]: open });
   };
+
+  const useStyles = makeStyles({
+    list: {
+      width: 250,
+    },
+    fullList: {
+      width: 'auto',
+    },
+  });
   
   // DRAWER PULL DOWN INARDS
   const list = (anchor) => (
@@ -42,6 +51,7 @@ function App(props) {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
         <Typography>
         Titanic, April 14th-15th 1912
@@ -121,20 +131,21 @@ function App(props) {
         id="exploreBtn">
         Explore
         </button>
-
         </div>) : true}
-
         
         <div>
-    
+
         {[' '].map((anchor) => (
         <React.Fragment key={anchor}>
           <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
+
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
             {list(anchor)}
           </Drawer>
+
         </React.Fragment>
         ))}
+
         </div>
 
         <img src={titanic} id="shipLayout" alt="ship blueprint"/>
