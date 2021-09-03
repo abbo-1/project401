@@ -14,6 +14,10 @@ import Drawer from '@material-ui/core/Drawer';
 import { withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
 import titanic from './images/titanic2.png';
 
@@ -53,48 +57,29 @@ function App(props) {
       onKeyDown={toggleDrawer(anchor, false)}
       class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
+
         <Typography>
         Titanic, April 14th-15th 1912
         </Typography>
 
-        <Radio
-        checked={selectedValue === 'a'}
-        onChange={handleChange}
-        value="a"
-        name="radio-button-demo"
-        inputProps={{ 'aria-label': 'A' }}
-      />
-      <Radio
-        checked={selectedValue === 'b'}
-        onChange={handleChange}
-        value="b"
-        name="radio-button-demo"
-        inputProps={{ 'aria-label': 'B' }}
-      />
-      <GreenRadio
-        checked={selectedValue === 'c'}
-        onChange={handleChange}
-        value="c"
-        name="radio-button-demo"
-        inputProps={{ 'aria-label': 'C' }}
-      />
-      <Radio
-        checked={selectedValue === 'd'}
-        onChange={handleChange}
-        value="d"
-        color="default"
-        name="radio-button-demo"
-        inputProps={{ 'aria-label': 'D' }}
-      />
-      <Radio
-        checked={selectedValue === 'e'}
-        onChange={handleChange}
-        value="e"
-        color="default"
-        name="radio-button-demo"
-        inputProps={{ 'aria-label': 'E' }}
-        size="small"
-      />
+        <FormControl component="fieldset">
+{/* 
+        <FormLabel component="legend">Gender</FormLabel> */}
+
+        <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
+
+          <FormControlLabel value="female" control={<Radio />} label="11:40 PM" />
+          <FormControlLabel value="male" control={<Radio />} label="12:00 AM" />
+          <FormControlLabel value="other" control={<Radio />} label="12:20 AM" />
+          <FormControlLabel value="other" control={<Radio />} label="12:40 AM" />
+          <FormControlLabel value="other" control={<Radio />} label="1:00 AM" />
+          <FormControlLabel value="other" control={<Radio />} label="1:20 AM" />
+          <FormControlLabel value="other" control={<Radio />} label="1:40 AM" />
+
+
+        </RadioGroup>
+        </FormControl>
+
     </div>
   );
 
