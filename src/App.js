@@ -11,95 +11,99 @@ import Typography from '@material-ui/core/Typography';
 // import Slider from '@material-ui/core/Slider';
 import Drawer from '@material-ui/core/Drawer';
 
-import Slider from 'react-toolbox/lib/slider';
-
-import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
+import Radio from '@material-ui/core/Radio';
 
 import titanic from './images/titanic2.png';
 
 
 function App(props) {
 
-const [showMessage, setMessageOff] = useState(true);
+  // FOR WELCOME MESSAGE
+  const [showMessage, setMessageOff] = useState(true);
 
-const [showLifeboatInfo, setLifeboatInfoOff] = useState();
+  // FOR DRAWER PULL DOWN
+  const [state, setState] = React.useState({
+    top: false,
+  });
 
-const [state, setState] = React.useState({
-  top: false,
-});
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
 
-const toggleDrawer = (anchor, open) => (event) => {
-  if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-    return;
-  }
-
-  setState({ ...state, [anchor]: open });
-};
-
-function valuetext(value) {
-  return `${value}nuts`;
-}
-
-state = {
-  slider3: 1
-};
-
-function handleChange(slider, value) {
-  const newState = {};
-  newState[slider] = value;
-  setState(newState);
-};
-
-const list = (anchor) => (
-  <div
-    role="presentation"
-    onClick={toggleDrawer(anchor, false)}
-    onKeyDown={toggleDrawer(anchor, false)}
-  >
-    <div id="sliderSize">
-        <Typography id="discrete-slider-small-steps" gutterBottom>
+    setState({ ...state, [anchor]: open });
+  };
+  
+  // DRAWER PULL DOWN INARDS
+  const list = (anchor) => (
+    <div
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+        <Typography>
         Titanic, April 14th-15th 1912
         </Typography>
-        {/* <Slider
-          defaultValue={0.00000005}
-          getAriaValueText={valuetext}
-          valueLabelDisplay="on"
-          aria-labelledby="discrete-slider-small-steps"
-          step={0.00000001}
-          marks={marks}
-          min={-0.00000005}
-          max={0.0000001}
-        /> */}
-        <Slider 
-          min={1} 
-          max={11} 
-          editable value={state.slider2} 
-          onChange={handleChange.bind(this, 'slider2')} 
-        />
-        </div>
 
-  </div>
-);
+        <Radio
+        checked={selectedValue === 'a'}
+        onChange={handleChange}
+        value="a"
+        name="radio-button-demo"
+        inputProps={{ 'aria-label': 'A' }}
+      />
+      <Radio
+        checked={selectedValue === 'b'}
+        onChange={handleChange}
+        value="b"
+        name="radio-button-demo"
+        inputProps={{ 'aria-label': 'B' }}
+      />
+      <GreenRadio
+        checked={selectedValue === 'c'}
+        onChange={handleChange}
+        value="c"
+        name="radio-button-demo"
+        inputProps={{ 'aria-label': 'C' }}
+      />
+      <Radio
+        checked={selectedValue === 'd'}
+        onChange={handleChange}
+        value="d"
+        color="default"
+        name="radio-button-demo"
+        inputProps={{ 'aria-label': 'D' }}
+      />
+      <Radio
+        checked={selectedValue === 'e'}
+        onChange={handleChange}
+        value="e"
+        color="default"
+        name="radio-button-demo"
+        inputProps={{ 'aria-label': 'E' }}
+        size="small"
+      />
+    </div>
+  );
 
+  // FOR RADIO BUTTONS
+  const GreenRadio = withStyles({
+    root: {
+      color: green[400],
+      '&$checked': {
+        color: green[600],
+      },
+    },
+    checked: {},
+  })((props) => <Radio color="default" {...props} />);
 
-const marks = [
-  {
-    value: 1140,
-    label: '11:40PM',
-  },
-  {
-    value: 1200,
-    label: '12:00AM',
-  },
-  {
-    value: 1230,
-    label: '12:30AM',
-  },
-  {
-    value: 100,
-    label: '1:00AM',
-  },
-];
+  const [selectedValue, setSelectedValue] = React.useState('a');
+
+  const handleChange = (event) => {
+   setSelectedValue(event.target.value);
+  };
 
   return (
     <div className="App">
