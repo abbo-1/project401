@@ -55,11 +55,15 @@ function App(props) {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
-      class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
+      // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
 
         <Typography>
         Titanic, April 14th-15th 1912
+        </Typography>
+
+        <Typography>
+        Please choose a time from the sinking below to see what was happening on deck.
         </Typography>
 
         <FormControl component="fieldset">
@@ -75,7 +79,6 @@ function App(props) {
           <FormControlLabel value="other" control={<Radio />} label="1:00 AM" />
           <FormControlLabel value="other" control={<Radio />} label="1:20 AM" />
           <FormControlLabel value="other" control={<Radio />} label="1:40 AM" />
-
 
         </RadioGroup>
         </FormControl>
