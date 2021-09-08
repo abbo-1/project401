@@ -20,7 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
 import titanic from './images/titanic2.png';
-import gundam from './images/gundam.jpg';
+import titanic1140 from './images/gundam.jpg';
 
 
 function App(props) {
@@ -68,18 +68,16 @@ function App(props) {
         </Typography>
 
         <FormControl component="fieldset">
-{/* 
-        <FormLabel component="legend">Gender</FormLabel> */}
 
         <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
 
           <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" />
-          <FormControlLabel value="male" control={<Radio />} label="12:00 AM" />
-          <FormControlLabel value="other" control={<Radio />} label="12:20 AM" />
-          <FormControlLabel value="other" control={<Radio />} label="12:40 AM" />
-          <FormControlLabel value="other" control={<Radio />} label="1:00 AM" />
-          <FormControlLabel value="other" control={<Radio />} label="1:20 AM" />
-          <FormControlLabel value="other" control={<Radio />} label="1:40 AM" />
+          <FormControlLabel value="male" onClick={handleClick}  control={<Radio />} label="12:00 AM" />
+          <FormControlLabel value="other" onClick={handleClick} control={<Radio />} label="12:20 AM" />
+          <FormControlLabel value="other" onClick={handleClick} control={<Radio />} label="12:40 AM" />
+          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:00 AM" />
+          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:20 AM" />
+          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:40 AM" />
 
         </RadioGroup>
         </FormControl>
