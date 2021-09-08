@@ -20,6 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
 import titanic from './images/titanic2.png';
+import gundam from './images/gundam.jpg';
 
 
 function App(props) {
@@ -72,7 +73,7 @@ function App(props) {
 
         <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
 
-          <FormControlLabel value="female" control={<Radio />} label="11:40 PM" />
+          <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" />
           <FormControlLabel value="male" control={<Radio />} label="12:00 AM" />
           <FormControlLabel value="other" control={<Radio />} label="12:20 AM" />
           <FormControlLabel value="other" control={<Radio />} label="12:40 AM" />
@@ -102,6 +103,10 @@ function App(props) {
   const handleChange = (event) => {
    setSelectedValue(event.target.value);
   };
+
+  //BACKGROUND STATE
+  const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
+  const handleClick = () => setMap(<img src={gundam}/>)
 
   return (
     <div className="App">
@@ -136,7 +141,9 @@ function App(props) {
 
         </div>
 
-        <img src={titanic} id="shipLayout" alt="ship blueprint"/>
+        {/* <img src={titanic} id="shipLayout" alt="ship blueprint"/> */}
+        {map}
+        {/* <img src={map} /> */}
 
         <div>
         <lifeboatDisplay />
