@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
 .App {
     /* background-color: #282c34;  */
   /* background-image: url('./images/just-waves.png');  */
@@ -8,6 +10,8 @@
   display: flex;
   /* cursor: grab;
   overflow: auto; */
+  font-family: 'Poiret One', cursive;
+  font-weight: bold;
 }
 
 #shipLayout {
@@ -18,8 +22,8 @@
 #welcomeMessage {
   color:white;
   background-color: #282c34;
-  font: "Trebuchet MS", Helvetica, sans-serif;
-  font-size: 1em;
+  /* font: "Trebuchet MS", Helvetica, sans-serif; */
+  font-size: 1.2em;
   border-radius: 8px;
   padding: 2%;
   /* display: flex; */
@@ -120,4 +124,10 @@
 #downIcon:hover {
    color:#FD0000;
    cursor: pointer;
+}
+
+.dateTime {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  margin-bottom: 20px;
 }

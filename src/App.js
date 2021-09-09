@@ -143,11 +143,18 @@ function App(props) {
         {map}
         {/* <img src={map} /> */}
 
+        <div className="dateTime">
+        <div>11:40</div>
+        <div>April 14th, 1912</div>
+        </div>
+
         <div>
         <lifeboatDisplay />
         </div>
 
         <Navbar sticky="bottom" bg="light" id="navBar">
+
+
 
         <Visualizer />
 
