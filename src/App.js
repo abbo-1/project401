@@ -20,7 +20,7 @@ import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 
 import titanic from './images/titanic2.png';
-import titanic1140 from './images/gundam.jpg';
+import titanic1140 from './images/titanic1140.png';
 
 
 function App(props) {
@@ -104,7 +104,7 @@ function App(props) {
 
   //BACKGROUND STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
-  const handleClick = () => setMap(<img src={gundam}/>)
+  const handleClick = () => setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>)
 
   return (
     <div className="App">
