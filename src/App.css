@@ -1,17 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poiret+One&display=swap');
 
 .App {
     /* background-color: #282c34;  */
   /* background-image: url('./images/just-waves.png');  */
-  background-image: url('./images/white_wave.png');
+  background-image: url('./images/just-waves.png');
   background-repeat: repeat;
   /* background-size: cover; */
   height: 100%; 
   display: flex;
   /* cursor: grab;
   overflow: auto; */
-  font-family: 'Poiret One', cursive;
-  font-weight: bold;
+  /* font-family: 'Poiret One', cursive; */
+  font-family: 'IM Fell English SC', serif;
+  /* font-weight: bold; */
 }
 
 #shipLayout {
@@ -127,7 +129,10 @@
 }
 
 .dateTime {
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  margin-bottom: 20px;
+  position: absolute;
+  font-size: 2.0rem;
+  margin-left: 2%;
+  margin-bottom: 2%;
+  bottom: 0;
+  left: 0;
 }

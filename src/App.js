@@ -116,7 +116,7 @@ function App(props) {
         <br/><br/>  
         By the end of the night only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 
-        Click on a lifeboat to learn more about each boat's survivors.
+        Use the drop down menu above to see the ship at different points during the sinking.
         <br/>  
         <button onClick={() => setMessageOff(null)} 
         id="exploreBtn">
@@ -144,7 +144,7 @@ function App(props) {
         {/* <img src={map} /> */}
 
         <div className="dateTime">
-        <div>11:40</div>
+        <div>11:40 PM</div>
         <div>April 14th, 1912</div>
         </div>
 
