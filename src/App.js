@@ -21,6 +21,11 @@ import FormLabel from '@material-ui/core/FormLabel';
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
+import firstclass from './images/people/firstclass.png';
+import secondclass from './images/people/secondclass.png';
+import thirdclass from './images/people/thirdclass.png';
+import officer from './images/people/officer.png';
+import crew from './images/people/crew.png';
 
 
 function App(props) {
@@ -144,8 +149,23 @@ function App(props) {
         {/* <img src={map} /> */}
 
         <div className="dateTime">
-        <div>11:40 PM</div>
+        <div>11:40 pm</div>
         <div>April 14th, 1912</div>
+        </div>
+
+        <div className="legend">
+          LEGEND
+        <img src={officer} /> 
+        Purple circles represent an officer.
+        <img src={crew} /> 
+        Blue circles represent a crew member.
+        <img src={firstclass} /> 
+        Yellow circles represent a first class passenger.
+        <img src={secondclass} /> 
+        Pink circles represent a first class passenger.
+        <img src={thirdclass} /> 
+        Orange circles represent a first class passenger.
+
         </div>
 
         <div>
