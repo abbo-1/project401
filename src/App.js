@@ -149,16 +149,34 @@ function App(props) {
         <div>April 14th, 1912</div>
         </div>
 
+
+        {/* <div>
+      {['left', 'right', 'top', 'bottom'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <SwipeableDrawer
+            anchor={anchor}
+            open={state[anchor]}
+            onClose={toggleDrawer(anchor, false)}
+            onOpen={toggleDrawer(anchor, true)}
+          >
+            {list(anchor)}
+          </SwipeableDrawer>
+        </React.Fragment>
+      ))}
+    </div> */}
+        <div className="legend">
         <Legend />
+        </div>
 
         <div>
         <lifeboatDisplay />
         </div>
 
-        <Navbar sticky="bottom" bg="light" id="navBar">
+        {/* <Navbar sticky="bottom" bg="light" id="navBar"> */}
 
 
-
+{/* 
         <Visualizer />
 
         <button onClick={alert}>Visualization</button>
@@ -173,7 +191,7 @@ function App(props) {
         Lifeboat 2
         </button>
 
-        </Navbar >
+        </Navbar > */}
 
 
 
@@ -182,7 +200,7 @@ function App(props) {
          {/* <button onClick={props.displayPassengers}>Lifeboat #1</button> */}
          {/* <button class="lifeboatBtn" onClick={thin()}>Lifeboat #1</button> */}
 
-      {/* </header> */} 
+      {/* </header>  */}
       </ScrollContainer>
     </div>
   );

@@ -1,3 +1,5 @@
+import React from 'react'
+
 import firstclass from '../images/people/firstclass.png';
 import secondclass from '../images/people/secondclass.png';
 import thirdclass from '../images/people/thirdclass.png';
@@ -7,10 +9,13 @@ import crew from '../images/people/crew.png';
 
 const Legend = () => {
 
-    <div className="legend">
+
+    return (
+
+    <div>
 
         LEGEND
-        
+
             <img src={officer} /> 
             Purple circles represent an officer.
 
@@ -27,7 +32,7 @@ const Legend = () => {
             Orange circles represent a first class passenger.
 
     </div>
-
+    )
 }
 
 export default Legend
