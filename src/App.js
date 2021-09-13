@@ -12,6 +12,8 @@ import Typography from '@material-ui/core/Typography';
 // import Slider from '@material-ui/core/Slider';
 import Drawer from '@material-ui/core/Drawer';
 
+import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+
 import { withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
 import Radio from '@material-ui/core/Radio';
@@ -120,6 +122,10 @@ function App(props) {
 
   return (
     <div className="App">
+      <TransformWrapper>
+        <TransformComponent>
+
+
       <ScrollContainer className="scroll-container">
       {/* <header className="App-header"> */}
       {/* {message} */}
@@ -210,6 +216,9 @@ function App(props) {
 
       {/* </header>  */}
       </ScrollContainer>
+
+      </TransformComponent>
+      </TransformWrapper>
     </div>
   );
 }
