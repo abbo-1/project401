@@ -19,7 +19,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
@@ -90,8 +90,9 @@ function App(props) {
   // FOR LEGEND
 
   const listy = (legend) => (
-    <div>
-
+    
+    <div className="legend">
+    <Legend />
     </div>
 
   )
@@ -160,26 +161,21 @@ function App(props) {
         </div>
 
 
-        <div>
+        {/* <div>
       {[' '].map((legend) => (
         <React.Fragment key={legend}>
-          <ExpandLessOutlinedIcon onClick={toggleDrawer(legend, true)}>{legend}</ExpandLessOutlinedIcon>
-          <Drawer
-            legend={legend}
+          <KeyboardArrowUpIcon onClick={toggleDrawer(legend, true)}>{legend}</KeyboardArrowUpIcon>
+          <Drawer             legend={legend}
             open={state[legend]}
             onClose={toggleDrawer(legend, false)}
-            onOpen={toggleDrawer(legend, true)}
-          >
+            onOpen={toggleDrawer(legend, true)}>
             {listy(legend)}
           </Drawer>
         </React.Fragment>
       ))}
-    </div>
+    </div> */}
 
 
-        <div className="legend">
-        <Legend />
-        </div>
 
         <div>
         <lifeboatDisplay />
