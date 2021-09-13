@@ -86,6 +86,15 @@ function App(props) {
     </div>
   );
 
+  // FOR LEGEND
+
+  const listy = (legend) => (
+    <div>
+      
+    </div>
+
+  )
+
   // FOR RADIO BUTTONS
   const GreenRadio = withStyles({
     root: {
@@ -150,21 +159,23 @@ function App(props) {
         </div>
 
 
-        {/* <div>
-      {['left', 'right', 'top', 'bottom'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+        <div>
+      {['right'].map((legend) => (
+        <React.Fragment key={legend}>
+          <Button onClick={toggleDrawer(legend, true)}>{legend}</Button>
           <SwipeableDrawer
-            anchor={anchor}
-            open={state[anchor]}
-            onClose={toggleDrawer(anchor, false)}
-            onOpen={toggleDrawer(anchor, true)}
+            legend={legend}
+            open={state[legend]}
+            onClose={toggleDrawer(legend, false)}
+            onOpen={toggleDrawer(legend, true)}
           >
-            {list(anchor)}
+            {listy(legend)}
           </SwipeableDrawer>
         </React.Fragment>
       ))}
-    </div> */}
+    </div>
+
+
         <div className="legend">
         <Legend />
         </div>
