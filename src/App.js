@@ -12,7 +12,7 @@ import Typography from '@material-ui/core/Typography';
 // import Slider from '@material-ui/core/Slider';
 import Drawer from '@material-ui/core/Drawer';
 
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 
 import { withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
@@ -124,6 +124,10 @@ function App(props) {
     <div className="App">
       <TransformWrapper>
         <TransformComponent>
+          {/* {({ zoomIn, zoomOut, resetTransform, positionX, positionY, ...rest }) => ( */}
+
+        <button onClick={zoomIn}>+</button>
+        <button onClick={zoomOut}>-</button>
 
 
       <ScrollContainer className="scroll-container">
