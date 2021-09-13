@@ -19,6 +19,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
@@ -90,7 +91,7 @@ function App(props) {
 
   const listy = (legend) => (
     <div>
-      
+
     </div>
 
   )
@@ -160,17 +161,17 @@ function App(props) {
 
 
         <div>
-      {['right'].map((legend) => (
+      {[' '].map((legend) => (
         <React.Fragment key={legend}>
-          <Button onClick={toggleDrawer(legend, true)}>{legend}</Button>
-          <SwipeableDrawer
+          <ExpandLessOutlinedIcon onClick={toggleDrawer(legend, true)}>{legend}</ExpandLessOutlinedIcon>
+          <Drawer
             legend={legend}
             open={state[legend]}
             onClose={toggleDrawer(legend, false)}
             onOpen={toggleDrawer(legend, true)}
           >
             {listy(legend)}
-          </SwipeableDrawer>
+          </Drawer>
         </React.Fragment>
       ))}
     </div>
