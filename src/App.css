@@ -25,7 +25,8 @@
   background-color: #282c34;
   font-size: 1.2em;
   border-radius: 8px;
-  padding: 2%;
+  max-width: 60vw;
+  padding: 1%;
   text-align: center;
   justify-content: center;
   opacity: 0.9;

@@ -128,10 +128,11 @@ function App(props) {
       <TransformWrapper
         // wheel:disabled="true"
         // wheel={disabled="true"}
+        // wheel={disabled : true}
       >
         
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-        <TransformComponent>
+        <TransformComponent >
           {/* {({ zoomIn, zoomOut, resetTransform, positionX, positionY, ...rest }) => ( */}
 
         <div id="zoomBtnsDiv">
