@@ -119,7 +119,6 @@
   font-size: 3.0rem;
   position: fixed;
   left: 50%;
-  /* bring your own prefixes */
   transform: translate(-50%);
 }
 
@@ -137,6 +136,8 @@
   left: 0;
 }
 
+/* LEGEND */
+
 .legend {
   position: absolute;
   font-size: 1.5rem;
@@ -144,4 +145,22 @@
   margin-bottom: 1%;
   bottom: 0;
   right: 0;
+}
+
+/* ZOOM IN AND OUT BUTTONS */
+
+.zoomBtnsDiv {
+  position: fixed;
+  margin-left: 1%;
+  margin-top: 1%;
+  top: 0;
+  left: 0;
+}
+
+.zoomBtns {
+  font-size: 3.0rem;
+}
+
+.zoomBtns:hover {
+  cursor: pointer;
 }

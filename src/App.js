@@ -130,8 +130,10 @@ function App(props) {
         <TransformComponent>
           {/* {({ zoomIn, zoomOut, resetTransform, positionX, positionY, ...rest }) => ( */}
 
-        <ZoomInIcon onClick={() => zoomIn()}/>
-        <ZoomOutIcon onClick={() => zoomOut()}/>
+        <div className="zoomBtnsDiv">
+        <ZoomInIcon className="zoomBtns" onClick={() => zoomIn()}/>
+        <ZoomOutIcon className="zoomBtns" onClick={() => zoomOut()}/>
+        </div>
 
       <ScrollContainer className="scroll-container">
       {/* <header className="App-header"> */}
