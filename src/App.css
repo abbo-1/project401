@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Poiret+One&display=swap');
 
 .App {
@@ -24,11 +23,9 @@
 #welcomeMessage {
   color:white;
   background-color: #282c34;
-  /* font: "Trebuchet MS", Helvetica, sans-serif; */
   font-size: 1.2em;
   border-radius: 8px;
   padding: 2%;
-  /* display: flex; */
   text-align: center;
   justify-content: center;
   opacity: 0.9;
@@ -149,7 +146,7 @@
 
 /* ZOOM IN AND OUT BUTTONS */
 
-.zoomBtnsDiv {
+#zoomBtnsDiv {
   position: fixed;
   margin-left: 1%;
   margin-top: 1%;
@@ -158,9 +155,14 @@
 }
 
 .zoomBtns {
-  font-size: 3.0rem;
+  font-size: 2.5rem !important;
+  border: 2px solid #282c34 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  margin: 2px !important;
 }
 
 .zoomBtns:hover {
   cursor: pointer;
+  border: 2px solid #FD0000 !important;
 }

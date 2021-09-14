@@ -130,7 +130,7 @@ function App(props) {
         <TransformComponent>
           {/* {({ zoomIn, zoomOut, resetTransform, positionX, positionY, ...rest }) => ( */}
 
-        <div className="zoomBtnsDiv">
+        <div id="zoomBtnsDiv">
         <ZoomInIcon className="zoomBtns" onClick={() => zoomIn()}/>
         <ZoomOutIcon className="zoomBtns" onClick={() => zoomOut()}/>
         </div>
