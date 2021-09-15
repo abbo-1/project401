@@ -78,13 +78,14 @@ function App(props) {
 
         <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
 
-          <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" />
-          <FormControlLabel value="male" onClick={handleClick}  control={<Radio />} label="12:00 AM" />
-          <FormControlLabel value="other" onClick={handleClick} control={<Radio />} label="12:20 AM" />
-          <FormControlLabel value="other" onClick={handleClick} control={<Radio />} label="12:40 AM" />
-          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:00 AM" />
-          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:20 AM" />
-          <FormControlLabel value="other" onClick={handleClick}  control={<Radio />} label="1:40 AM" />
+          {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="11:40 PM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:00 AM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:20 AM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:40 AM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:00 AM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:20 AM" />
+          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:40 AM" />
 
         </RadioGroup>
         </FormControl>
@@ -145,7 +146,7 @@ function App(props) {
       {/* <header className="App-header"> */}
       {/* {message} */}
       {showMessage ? (<div id='welcomeMessage'>
-        In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 PM, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
+        In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
         <br/><br/>  
         By the end of the night only 712 people, less then 1/3rd of those who were on board, survived. 
         <br/> <br/> 

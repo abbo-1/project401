@@ -137,7 +137,7 @@
 /* LEGEND */
 
 .legend {
-  position: absolute;
+  position: sticky;
   font-size: 1.5rem;
   margin-right: 1%;
   margin-bottom: 1%;
