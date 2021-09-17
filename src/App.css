@@ -125,13 +125,17 @@
    cursor: pointer;
 }
 
-.dateTime {
+.dateTimeDiv {
   position: absolute;
-  font-size: 1.5rem;
   margin-left: 1%;
   margin-bottom: 1%;
   bottom: 0;
   left: 0;
+}
+
+.dateTime {
+  position: sticky;
+  font-size: 1.5rem;
 }
 
 /* LEGEND */
@@ -166,4 +170,10 @@
 .zoomBtns:hover {
   cursor: pointer;
   border: 2px solid #FD0000 !important;
+}
+
+.testShit {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }

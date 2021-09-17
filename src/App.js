@@ -30,6 +30,7 @@ import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
 
 
+
 function App(props) {
 
   // FOR WELCOME MESSAGE
@@ -177,10 +178,12 @@ function App(props) {
         {map}
         {/* <img src={map} /> */}
 
-        <div className="dateTime">
-        <div>11:40 pm</div>
-        <div>April 14th, 1912</div>
+        <div className="dateTimeDiv">
+        <div className="dateTime">11:40 pm</div>
+        <div className="dateTime">April 14th, 1912</div>
         </div>
+
+        <div className="testShit">adt</div>
 
 
         {/* <div>
