@@ -123,11 +123,18 @@ function App(props) {
 
   //BACKGROUND STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
-  const handleClick = () => setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>)
-
   const [timeDate, setTimeDate] = useState("")
-  const handleClick = () => setTimeDate(<div><div className="dateTime">11:40 pm</div>
+
+  function handleClick () {
+    setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>);
+    setTimeDate(<div><div className="dateTime">11:40 pm</div>
   <div className="dateTime">April 14th, 1912</div></div>)
+  }
+  // const handleClick = () => setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>)
+
+  // const [timeDate, setTimeDate] = useState("")
+  // const handleClick = () => setTimeDate(<div><div className="dateTime">11:40 pm</div>
+  // <div className="dateTime">April 14th, 1912</div></div>)
 
   return (
     <div className="App">
