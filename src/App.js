@@ -125,6 +125,10 @@ function App(props) {
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
   const handleClick = () => setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>)
 
+  const [timeDate, setTimeDate] = useState("")
+  const handleClick = () => setTimeDate(<div><div className="dateTime">11:40 pm</div>
+  <div className="dateTime">April 14th, 1912</div></div>)
+
   return (
     <div className="App">
       <TransformWrapper
@@ -179,8 +183,7 @@ function App(props) {
         {/* <img src={map} /> */}
 
         <div className="dateTimeDiv">
-        <div className="dateTime">11:40 pm</div>
-        <div className="dateTime">April 14th, 1912</div>
+        {timeDate}
         </div>
 
         <div className="testShit">adt</div>
