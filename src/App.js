@@ -30,7 +30,6 @@ import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
 
 
-
 function App(props) {
 
   // FOR WELCOME MESSAGE
@@ -60,6 +59,7 @@ function App(props) {
   
   // DRAWER PULL DOWN INARDS
   const list = (anchor) => (
+
     <div
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -80,13 +80,13 @@ function App(props) {
         <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
 
           {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="11:40 PM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:00 AM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:20 AM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="12:40 AM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:00 AM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:20 AM" />
-          <FormControlLabel onClick={handleClick} control={<Radio />} label="1:40 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:40 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:00 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
 
         </RadioGroup>
         </FormControl>
@@ -95,7 +95,6 @@ function App(props) {
   );
 
   // FOR LEGEND
-
   const listy = (legend) => (
     
     <div className="legend">
@@ -121,20 +120,21 @@ function App(props) {
    setSelectedValue(event.target.value);
   };
 
-  //BACKGROUND STATE
+  //BACKGROUND & TIME STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
   const [timeDate, setTimeDate] = useState("")
 
   function handleClick () {
-    setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>);
-    setTimeDate(<div><div className="dateTime">11:40 pm</div>
-  <div className="dateTime">April 14th, 1912</div></div>)
+    setMap(
+      <img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>
+      );
+    setTimeDate(
+      <div>
+        <div className="dateTime">11:40 pm</div>
+        <div className="dateTime">April 14th, 1912</div>
+      </div>
+      );
   }
-  // const handleClick = () => setMap(<img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>)
-
-  // const [timeDate, setTimeDate] = useState("")
-  // const handleClick = () => setTimeDate(<div><div className="dateTime">11:40 pm</div>
-  // <div className="dateTime">April 14th, 1912</div></div>)
 
   return (
     <div className="App">
@@ -192,9 +192,6 @@ function App(props) {
         <div className="dateTimeDiv">
         {timeDate}
         </div>
-
-        <div className="testShit">adt</div>
-
 
         {/* <div>
       {[' '].map((legend) => (
