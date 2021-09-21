@@ -169,11 +169,30 @@
 
 .zoomBtns:hover {
   cursor: pointer;
-  border: 2px solid #FD0000 !important;
+  border: 2px solid #DBB13B !important;
 }
 
-.testShit {
+#legendBtnDiv {
+  position: fixed;
+  margin-right: 1%;
+  margin-bottom: 1%;
+  bottom: 0;
+  right: 0;
+}
+
+#legendBtn {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
+  bottom: 0;
+  color: #DBB13B;
+  border: 2px solid white !important;
+  background: #303030 !important;
+  border-radius: 4px !important;
+  padding: 3px;
+  margin: 2px !important;
+}
+
+#legendBtn:hover {
+  cursor: pointer;
+  border: 2px solid #ad2323 !important;
 }

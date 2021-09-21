@@ -11,11 +11,13 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 // import Slider from '@material-ui/core/Slider';
 import Drawer from '@material-ui/core/Drawer';
+// import Button from '@mui/material/Button';
 
 import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
 import RestoreIcon from '@material-ui/icons/Restore';
+// import MapIcon from '@mui/icons-material/Map';
 
 import { withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
@@ -191,6 +193,12 @@ function App(props) {
 
         <div className="dateTimeDiv">
         {timeDate}
+        </div>
+
+        <div id="legendBtnDiv">
+        <button id="legendBtn">
+          LEGEND
+        </button>
         </div>
 
         {/* <div>
