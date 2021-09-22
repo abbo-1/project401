@@ -10,15 +10,18 @@
   display: flex;
   /* cursor: grab;
   overflow: auto; */
-  /* font-family: 'Poiret One', cursive; */
   font-family: 'IM Fell English SC', serif;
-  /* font-weight: bold; */
+
 }
+
+/* MAIN SHIP DISPLAY */
 
 #shipLayout {
   height: 98vh;
   width: auto;
 }
+
+/* WELCOME MESSAGE */
 
 #welcomeMessage {
   color:white;
@@ -56,6 +59,8 @@
   background-color: #FD0000;
   color: white;
 }
+
+/* LIFE BOAT EXPLORER */
 
 #boatDisplayComponent {
   color:white;
@@ -113,17 +118,7 @@
   margin: 5px;
 }
 
-#downIcon {
-  font-size: 3.0rem;
-  position: fixed;
-  left: 50%;
-  transform: translate(-50%);
-}
-
-#downIcon:hover {
-   color:#FD0000;
-   cursor: pointer;
-}
+/* DATE AND TIME */
 
 .dateTimeDiv {
   position: absolute;
@@ -201,6 +196,18 @@
 }
 
 /* PULL DOWN */
+
+#downIcon {
+  font-size: 3.0rem;
+  position: fixed;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+#downIcon:hover {
+   color:#FD0000;
+   cursor: pointer;
+}
 
 .MuiDrawer-paper {
   width: 100% !important;
