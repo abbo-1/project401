@@ -149,29 +149,6 @@
   right: 0;
 }
 
-/* ZOOM IN AND OUT BUTTONS */
-
-#zoomBtnsDiv {
-  position: fixed;
-  margin-left: 1%;
-  margin-top: 1%;
-  top: 0;
-  left: 0;
-}
-
-.zoomBtns {
-  font-size: 40px !important;
-  border: 2px solid #282c34 !important;
-  background: white !important;
-  border-radius: 8px !important;
-  margin: 2px !important;
-}
-
-.zoomBtns:hover {
-  cursor: pointer;
-  border: 2px solid #DBB13B !important;
-}
-
 #legendBtnDiv {
   position: fixed;
   margin-right: 1%;
@@ -198,4 +175,40 @@
 #legendBtn:hover {
   cursor: pointer;
   border: 3px solid #DBB13B !important;
+}
+
+/* ZOOM IN AND OUT BUTTONS */
+
+#zoomBtnsDiv {
+  position: fixed;
+  margin-left: 1%;
+  margin-top: 1%;
+  top: 0;
+  left: 0;
+}
+
+.zoomBtns {
+  font-size: 40px !important;
+  border: 2px solid #282c34 !important;
+  background: white !important;
+  border-radius: 8px !important;
+  margin: 2px !important;
+}
+
+.zoomBtns:hover {
+  cursor: pointer;
+  border: 2px solid #DBB13B !important;
+}
+
+/* PULL DOWN */
+
+.MuiDrawer-paper {
+  width: 100% !important;
+  height: 40% !important;
+}
+
+#pullDownTxt {
+  font-family: 'IM Fell English SC', serif !important;
+  text-align: center;
+  font-size: 1.2em;
 }

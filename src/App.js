@@ -69,6 +69,7 @@ function App(props) {
       // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
 
+        <div id="pullDownTxt">
         <Typography>
         Titanic, April 14th-15th 1912
         </Typography>
@@ -76,6 +77,7 @@ function App(props) {
         <Typography>
         Please choose a time from the sinking below to see what was happening on deck.
         </Typography>
+        </div>
 
         <FormControl component="fieldset">
 
