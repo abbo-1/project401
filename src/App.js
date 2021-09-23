@@ -70,18 +70,27 @@ function App(props) {
     >
 
         <div id="pullDownTxt">
-        <Typography>
-        Titanic, April 14th-15th 1912
-        </Typography>
 
-        <Typography>
-        Please choose a time from the sinking below to see what was happening on deck.
-        </Typography>
+          <div>
+            Titanic
+          </div>
+        
+          <div>
+            April 14th-15th 1912
+          </div>
+
+          <div>
+            Please choose a time from the sinking below to see what was happening on deck.
+          </div>
+
         </div>
 
         <FormControl component="fieldset">
 
         <RadioGroup aria-label="gender" name="gender1"  onChange={handleChange}>
+
+        <Container>
+        <Row>
 
           {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" />
@@ -91,6 +100,9 @@ function App(props) {
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:00 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
+
+        </Row>
+        </Container>
 
         </RadioGroup>
         </FormControl>

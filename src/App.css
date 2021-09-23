@@ -136,7 +136,7 @@
 /* LEGEND */
 
 .legend {
-  position: sticky;
+  position: sticky !important;
   font-size: 1.5rem;
   margin-right: 1%;
   margin-bottom: 1%;
@@ -153,8 +153,7 @@
 }
 
 #legendBtn {
-  position: -webkit-sticky;
-  position: sticky;
+  position: sticky !important;
   bottom: 0;
   color: #DBB13B;
   border: 3px solid #ad2323 !important;
