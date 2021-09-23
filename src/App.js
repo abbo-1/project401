@@ -93,13 +93,21 @@ function App(props) {
         <Row>
 
           {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" />
+          <Col sm={12} md={4}>
+            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" />
+            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" />
+            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" />
+          </Col>
+          <Col sm={12} md={12}>
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:40 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:00 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" />
+          </Col>
+          <Col sm={12} md={12}>
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:42 AM" />
+          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:43 AM" />
+          </Col>
 
         </Row>
         </Container>
