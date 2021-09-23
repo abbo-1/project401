@@ -235,6 +235,8 @@ function App(props) {
           LEGEND
         </button>
 
+        <Visualizer />
+
         <button onClick={props.displayPassengers}
         class="lifeboatBtn">
         SHIP DEMOGRAPHICS

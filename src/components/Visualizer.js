@@ -169,8 +169,8 @@ const [showAge, setShowAgeOff] = useState(false);
 
     return (
         <div>
-      <Button variant="primary" onClick={handleShow}>
-        Beep
+      <Button class="lifeboatBtn" onClick={handleShow}>
+      SHIP DEMOGRAPHICS
       </Button>
 
         <Modal 
