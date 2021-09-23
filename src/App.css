@@ -14,11 +14,24 @@
 
 }
 
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
 /* MAIN SHIP DISPLAY */
 
 #shipLayout {
   height: 98vh;
   width: auto;
+}
+
+/* LINE BREAK */
+
+.break {
+  white-space: pre-line;
+  height: 10px;
 }
 
 /* WELCOME MESSAGE */
@@ -81,24 +94,22 @@
 }
 
 .lifeboatBtn {
-  text-align: center;
-  display: inline-block;
-  font-size: 1em;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 8px;
-  border: 2px solid #412faa;
-  background-color: white;
-  color: black;
-
-  padding: 10px 15px;
-  margin: 4px 2px;
-  width: 100px;
+  position: sticky !important;
+  bottom: 0;
+  color: #DBB13B;
+  border: 3px solid #ad2323 !important;
+  background: #303030 !important;
+  border-radius: 4px !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-right: 14px;
+  padding-left: 14px;
+  margin: 2px !important;
 }
 
 .lifeboatBtn:hover {
-  background-color: #412faa;
-  color: white;
+  cursor: pointer;
+  border: 3px solid #DBB13B !important;
 }
 
 #navBar {

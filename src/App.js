@@ -13,6 +13,10 @@ import Typography from '@material-ui/core/Typography';
 import Drawer from '@material-ui/core/Drawer';
 // import Button from '@mui/material/Button';
 
+import Col from 'react-bootstrap/Col'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+
 import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
@@ -82,8 +86,7 @@ function App(props) {
           <div>
             Please choose a time from the sinking below to see what was happening on deck.
           </div>
-
-        </div>
+          <div className="break" />
 
         <FormControl component="fieldset">
 
@@ -93,20 +96,29 @@ function App(props) {
         <Row>
 
           {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
-          <Col sm={12} md={4}>
-            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" />
-            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" />
-            <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" />
+          <Col sm={12} md={3}>
+          <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" /></li>
+          <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" /></li>
+          <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" /></li>
           </Col>
-          <Col sm={12} md={12}>
+          <Col sm={12} md={3}>
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:40 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:00 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" />
           </Col>
-          <Col sm={12} md={12}>
+          <Col sm={12} md={3}>
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:42 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:43 AM" />
+          </Col>
+
+          <Col sm={12} md={3}>
+          <div>
+          "You could actually walk miles along the decks and passages covering different ground all the time. I was thoroughly familiar with pretty well every type of ship afloat but it took me 14 days before I could, with confidence, find my way from one part of that ship to another." 
+          </div>
+          <div>
+            - Charles Lightoller, 2nd Officer
+          </div>
           </Col>
 
         </Row>
@@ -114,6 +126,7 @@ function App(props) {
 
         </RadioGroup>
         </FormControl>
+        </div>
 
     </div>
   );
@@ -221,6 +234,11 @@ function App(props) {
         <button id="legendBtn">
           LEGEND
         </button>
+
+        <button onClick={props.displayPassengers}
+        class="lifeboatBtn">
+        SHIP DEMOGRAPHICS
+        </button>
         </div>
 
         {/* <div>
@@ -244,7 +262,7 @@ function App(props) {
         </div>
 
         {/* <Navbar sticky="bottom" bg="light" id="navBar"> */}
-
+        <Visualizer />
 
 {/* 
         <Visualizer />
