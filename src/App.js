@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
+
 import Visualizer from './components/Visualizer.js'
 import Legend from './components/Legend.js'
+import HUD from './components/HUD.js'
+
 import ScrollContainer from 'react-indiana-drag-scroll';
 // import AppBar from '@material-ui/core/AppBar';
 // import BottomNavigation from '@material-ui/core/BottomNavigation';
@@ -175,6 +178,7 @@ function App(props) {
 
   return (
     <div className="App">
+      <HUD />
       <TransformWrapper
         // wheel:disabled="true"
         // wheel={disabled="true"}
@@ -230,10 +234,10 @@ function App(props) {
         {timeDate}
         </div>
 
-        <div id="legendBtnDiv">
+        {/* <div id="legendBtnDiv">
         <button id="legendBtn">
           LEGEND
-        </button>
+        </button> */}
 
         <Visualizer />
 
@@ -241,7 +245,7 @@ function App(props) {
         class="lifeboatBtn">
         SHIP DEMOGRAPHICS
         </button>
-        </div>
+        {/* </div> */}
 
         {/* <div>
       {[' '].map((legend) => (
