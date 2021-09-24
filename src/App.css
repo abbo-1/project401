@@ -207,6 +207,10 @@ ul.no-bullets {
 
 /* PULL DOWN */
 
+#pullDownDiv {
+  position: sticky;
+}
+
 #downIcon {
   font-size: 3.0rem;
   position: fixed;
