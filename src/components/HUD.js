@@ -118,16 +118,16 @@ const HUD = () => {
     </div>
   );
 
-  function pullDown() {[' '].map((anchor) => (
-    <React.Fragment key={anchor}>
-      <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
+//   function pullDown() {[' '].map((anchor) => (
+//     <React.Fragment key={anchor}>
+//       <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
 
-      <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-        {list(anchor)}
-      </Drawer>
+//       <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+//         {list(anchor)}
+//       </Drawer>
 
-    </React.Fragment>
-    ))}
+//     </React.Fragment>
+//     ))}
 
     
   // FOR RADIO BUTTONS
@@ -151,6 +151,17 @@ const HUD = () => {
 
     return (
         <div>
+
+{[' '].map((anchor) => (
+    <React.Fragment key={anchor}>
+      <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
+
+      <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+        {list(anchor)}
+      </Drawer>
+
+    </React.Fragment>
+    ))}
 
 {showMessage ? (<div id='welcomeMessage'>
         In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
