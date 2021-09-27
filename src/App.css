@@ -162,6 +162,7 @@ ul.no-bullets {
   margin-bottom: 1%;
   bottom: 0;
   right: 0;
+  z-index: 3;
 }
 
 #legendBtn {
@@ -211,6 +212,7 @@ ul.no-bullets {
 
 #pullDownDiv {
   position: sticky;
+  z-index: 3;
 }
 
 #downIcon {

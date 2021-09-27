@@ -176,9 +176,24 @@ const HUD = () => {
         </button>
         </div>) : true}
 
-            <div id="pullDownDiv">
+            {/* <div id="pullDownDiv">
                 {pullDown}
-            </div>
+            </div> */}
+        
+        <div id="pullDownDiv">
+            {[' '].map((anchor) => (
+                <React.Fragment key={anchor}>
+                    <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}> 
+                        {anchor}
+                    </KeyboardArrowDownIcon>
+
+                    <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+                        {list(anchor)}
+                    </Drawer>
+
+                </React.Fragment>
+            ))}
+        </div>
 
             {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
 
