@@ -82,18 +82,16 @@ function App(props) {
      
         {map}
 
-        <Visualizer />
-
-        <button onClick={props.displayPassengers}
+        {/* <button onClick={props.displayPassengers}
         class="lifeboatBtn">
         SHIP DEMOGRAPHICS
         </button>
         
         <div>
         <lifeboatDisplay />
-        </div>
-
-        <Visualizer />
+        </div> */}
+{/* 
+        <Visualizer class="lifeboatBtn"/> */}
 
       </ScrollContainer>
 

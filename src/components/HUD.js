@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import Visualizer from './Visualizer.js'
+
 import ZoomInIcon from '@material-ui/icons/ZoomIn';
 import ZoomOutIcon from '@material-ui/icons/ZoomOut';
 import RestoreIcon from '@material-ui/icons/Restore';
@@ -118,18 +120,6 @@ const HUD = () => {
     </div>
   );
 
-//   function pullDown() {[' '].map((anchor) => (
-//     <React.Fragment key={anchor}>
-//       <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
-
-//       <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-//         {list(anchor)}
-//       </Drawer>
-
-//     </React.Fragment>
-//     ))}
-
-    
   // FOR RADIO BUTTONS
   const GreenRadio = withStyles({
     root: {
@@ -151,17 +141,6 @@ const HUD = () => {
 
     return (
         <div>
-
-{[' '].map((anchor) => (
-    <React.Fragment key={anchor}>
-      <KeyboardArrowDownIcon id='downIcon' onClick={toggleDrawer(anchor, true)}>{anchor}</KeyboardArrowDownIcon>
-
-      <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-        {list(anchor)}
-      </Drawer>
-
-    </React.Fragment>
-    ))}
 
 {showMessage ? (<div id='welcomeMessage'>
         In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
@@ -209,11 +188,18 @@ const HUD = () => {
                 {timeDate}
             </div>  */}
 
-            <div id="legendBtnDiv">
+
+            <div id="lowerLeftCorner">
                 <button id="legendBtn">
                     LEGEND
                 </button>
+            
+                <button id="lifeboatBtn">
+                    DEMOGRAPHICS
+                </button>
             </div>
+
+            {/* <Visualizer id="legendBtn"/> */}
 
         </div>
     )
