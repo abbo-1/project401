@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
+import LoadingGif from './images/loading.gif'
+
 import Visualizer from './components/Visualizer.js'
 import Legend from './components/Legend.js'
 import HUD from './components/HUD.js'
@@ -40,6 +42,13 @@ import titanic1140 from './images/titanic1140.png';
 
 
 function App(props) {
+
+  //FOR LOADING GIF
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => setLoading(false), 6000)
+  }, [])
 
 
   // FOR LEGEND
@@ -97,7 +106,7 @@ function App(props) {
 
       </TransformComponent>
       </TransformWrapper>
-    </div>
+      </div>
   );
 }
 
