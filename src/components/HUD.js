@@ -76,7 +76,8 @@ const HUD = () => {
           <div>
             Please choose a time from the sinking below to see what was happening on deck.
           </div>
-          <div className="break" />
+        
+        <div className="break" />
 
         <FormControl component="fieldset">
 
@@ -143,6 +144,20 @@ const HUD = () => {
 
     return (
         <div>
+      {/* <TransformWrapper
+        // wheel:disabled="true"
+        // wheel={disabled="true"}
+        // wheel={disabled : true}
+      >
+        
+        {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+        <TransformComponent >
+        <div id="zoomBtnsDiv">
+          <ZoomInIcon className="zoomBtns" onClick={() => zoomIn()}/>
+          <ZoomOutIcon className="zoomBtns" onClick={() => zoomOut()}/>
+          <RestoreIcon className="zoomBtns" onClick={() => resetTransform()}/>
+        </div> */}
+
 
 {showMessage ? (<div id='welcomeMessage'>
         In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
@@ -176,15 +191,13 @@ const HUD = () => {
             ))}
         </div>
 
-            {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+            {/* {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
 
             <div id="zoomBtnsDiv">
                 <ZoomInIcon className="zoomBtns" onClick={() => zoomIn()}/>
                 <ZoomOutIcon className="zoomBtns" onClick={() => zoomOut()}/>
                 <RestoreIcon className="zoomBtns" onClick={() => resetTransform()}/>
-            </div>
-
-            )}
+            </div> */}
 
             {/* <div className="dateTimeDiv">
                 {timeDate}
@@ -202,7 +215,9 @@ const HUD = () => {
             </div>
 
             {/* <Visualizer id="legendBtn"/> */}
-
+        {/* </ TransformComponent >
+        )}
+      </ TransformWrapper> */}
         </div>
     )
 }

@@ -207,6 +207,7 @@ ul.no-bullets {
 }
 
 .zoomBtns {
+  position: fixed;
   font-size: 40px !important;
   border: 2px solid #282c34 !important;
   background: white !important;
