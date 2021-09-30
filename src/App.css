@@ -198,19 +198,20 @@ ul.no-bullets {
 /* ZOOM IN AND OUT BUTTONS */
 
 #zoomBtnsDiv {
-  position: fixed;
+  /* position: fixed; */
   margin-left: 1%;
   margin-top: 1%;
   top: 0;
-  left: 0;
+  left: 0; 
   z-index: 3;
 }
 
 .zoomBtns {
-  position: fixed;
+  /* position: fixed; */
   font-size: 40px !important;
-  border: 2px solid #282c34 !important;
-  background: white !important;
+  color: #DBB13B;
+  border: 3px solid #ad2323 !important;
+  background: #303030 !important;
   border-radius: 8px !important;
   margin: 2px !important;
 }

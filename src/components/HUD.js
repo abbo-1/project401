@@ -27,7 +27,8 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 
 
-const HUD = () => {
+function HUD(props) {
+
       // FOR WELCOME MESSAGE
   const [showMessage, setMessageOff] = useState(true);
 
@@ -101,7 +102,7 @@ const HUD = () => {
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:42 AM" />
           <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:43 AM" /> */}
-          butto
+
           </Col>
 
           <Col sm={12} md={3}>
@@ -144,20 +145,14 @@ const HUD = () => {
 
     return (
         <div>
-      {/* <TransformWrapper
-        // wheel:disabled="true"
-        // wheel={disabled="true"}
-        // wheel={disabled : true}
-      >
-        
-        {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-        <TransformComponent >
-        <div id="zoomBtnsDiv">
-          <ZoomInIcon className="zoomBtns" onClick={() => zoomIn()}/>
-          <ZoomOutIcon className="zoomBtns" onClick={() => zoomOut()}/>
-          <RestoreIcon className="zoomBtns" onClick={() => resetTransform()}/>
-        </div> */}
 
+                  {/* {({ zoomIn, zoomOut, resetTransform, ...rest }) => ( */}
+
+        <div id="zoomBtnsDiv">
+          <ZoomInIcon className="zoomBtns" onClick={props.zoomIn}/>
+          <ZoomOutIcon className="zoomBtns" onClick={props.zoomOut}/>
+          <RestoreIcon className="zoomBtns" onClick={props.resetTransform}/>
+        </div>
 
 {showMessage ? (<div id='welcomeMessage'>
         In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 
@@ -215,9 +210,7 @@ const HUD = () => {
             </div>
 
             {/* <Visualizer id="legendBtn"/> */}
-        {/* </ TransformComponent >
-        )}
-      </ TransformWrapper> */}
+
         </div>
     )
 }

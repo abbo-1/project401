@@ -76,16 +76,13 @@ function App(props) {
       );
   }
 
+
   return (
     <div className="App">
-      <HUD />
-      <TransformWrapper
-        // wheel:disabled="true"
-        // wheel={disabled="true"}
-        // wheel={disabled : true}
-      >
-        
-      <TransformComponent >
+      <TransformWrapper>
+      {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
+        <TransformComponent>
+        <HUD props={zoomIn, zoomOut, resetTransform} />
 
         <ScrollContainer className="scroll-container">
      
@@ -103,8 +100,8 @@ function App(props) {
         <Visualizer class="lifeboatBtn"/> */}
 
       </ScrollContainer>
-
       </TransformComponent>
+      )}
       </TransformWrapper>
       </div>
   );
