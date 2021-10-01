@@ -61,16 +61,17 @@ function HUD(props) {
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      id="pullDownBackground"
       // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
 
         <div id="pullDownTxt">
-
-          <div>
+{/* 
+          <div id="topMargin">
             Titanic
-          </div>
+          </div> */}
         
-          <div>
+          <div id="topMargin">
             April 14th-15th 1912
           </div>
 
@@ -148,11 +149,15 @@ function HUD(props) {
 
                   {/* {({ zoomIn, zoomOut, resetTransform, ...rest }) => ( */}
 
-        <div id="zoomBtnsDiv">
-          <ZoomInIcon className="zoomBtns" onClick={props.zoomIn}/>
+        {/* <div id="zoomBtnsDiv"> */}
+          {/* <ZoomInIcon className="zoomBtns" onClick={props.zoomIn}/>
           <ZoomOutIcon className="zoomBtns" onClick={props.zoomOut}/>
-          <RestoreIcon className="zoomBtns" onClick={props.resetTransform}/>
-        </div>
+          <RestoreIcon className="zoomBtns" onClick={props.resetTransform}/> */}
+
+          {/* <ZoomInIcon className="zoomBtns" />
+          <ZoomOutIcon className="zoomBtns" />
+          <RestoreIcon className="zoomBtns" />
+        </div> */}
 
 {showMessage ? (<div id='welcomeMessage'>
         In the twilight hours of April 15th 1912, the RMS Titanic sank beneath the waves. From the time of collision at 11:45 pm, until the ship's last moments, a courageous few worked tirelessly to launch lifeboats. 

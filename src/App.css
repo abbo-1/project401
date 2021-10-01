@@ -242,11 +242,21 @@ ul.no-bullets {
 
 .MuiDrawer-paper {
   width: 100% !important;
-  height: 40% !important;
+  height: 60% !important;
 }
 
 #pullDownTxt {
   font-family: 'IM Fell English SC', serif !important;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
+  color: white;
+}
+
+#topMargin {
+  margin-top: 15px;
+  text-decoration: underline;
+}
+
+#pullDownBackground {
+  background-image: url('./images/background6.png')
 }

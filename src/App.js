@@ -79,10 +79,12 @@ function App(props) {
 
   return (
     <div className="App">
-      <TransformWrapper>
+      {/* <TransformWrapper>
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
-        <TransformComponent>
-        <HUD props={zoomIn, zoomOut, resetTransform} />
+        <TransformComponent> */}
+        {/* <HUD props={zoomIn, zoomOut, resetTransform} /> */}
+        <HUD />
+
 
         <ScrollContainer className="scroll-container">
      
@@ -100,9 +102,9 @@ function App(props) {
         <Visualizer class="lifeboatBtn"/> */}
 
       </ScrollContainer>
-      </TransformComponent>
+      {/* </TransformComponent>
       )}
-      </TransformWrapper>
+      </TransformWrapper> */}
       </div>
   );
 }
