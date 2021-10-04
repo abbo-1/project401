@@ -8,6 +8,9 @@ import RestoreIcon from '@material-ui/icons/Restore';
 
 import RadioGroup from '@material-ui/core/RadioGroup';
 
+import titanic from '../images/titanic2.png';
+import titanic1140 from '../images/titanic1140.png';
+
 import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -90,27 +93,26 @@ function HUD(props) {
 
           {/* <FormControlLabel value="female" onClick={handleClick} control={<Radio />} label="11:40 PM" /> */}
           <Col sm={12} md={3}>
-          {/* <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" /></li>
-          <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" /></li>
-          <li><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="11:40 PM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:35 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" /></li>
           </Col>
           <Col sm={12} md={3}>
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:40 AM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:00 AM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:20 AM" />
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:00 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:50 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:30 AM" /></li>
           </Col>
           <Col sm={12} md={3}>
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:40 AM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:42 AM" />
-          <FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:43 AM" /> */}
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="12:20 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:05 AM" /></li>
+          <li class="no-bullets"><FormControlLabel onClick={handleClick} value="female" control={<Radio />} label="1:43 AM" /></li>
+          </Col>
 
-          </Col>
-
           <Col sm={12} md={3}>
-          <div>
+          <div class="pullDownTxtQuote">
           "You could actually walk miles along the decks and passages covering different ground all the time. I was thoroughly familiar with pretty well every type of ship afloat but it took me 14 days before I could, with confidence, find my way from one part of that ship to another." 
           </div>
-          <div>
+          <div class="pullDownTxtQuote">
             - Charles Lightoller, 2nd Officer
           </div>
           </Col>
@@ -142,7 +144,21 @@ function HUD(props) {
    setSelectedValue(event.target.value);
   };
 
+  //BACKGROUND & TIME STATE
+  const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
+  const [timeDate, setTimeDate] = useState("")
 
+  function handleClick () {
+    setMap(
+      <img  id="shipLayout" alt="ship blueprint" src={titanic1140}/>
+      );
+    setTimeDate(
+      <div>
+        <div className="dateTime">11:40 pm</div>
+        <div className="dateTime">April 14th, 1912</div>
+      </div>
+      );
+  }
 
     return (
         <div>

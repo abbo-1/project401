@@ -3,7 +3,7 @@
 .App {
     /* background-color: #282c34;  */
   /* background-image: url('./images/just-waves.png');  */
-  background-image: url('./images/just-waves.png');
+  background-image: url('./images/ocean2.jpg');
   background-repeat: repeat;
   /* background-size: cover; */
   height: 100%; 
@@ -252,6 +252,13 @@ ul.no-bullets {
   color: white;
 }
 
+.pullDownTxtQuote {
+  font-family: 'IM Fell English SC', serif !important;
+  text-align: center;
+  font-size: .75em;
+  color: white;
+}
+
 #topMargin {
   margin-top: 15px;
   text-decoration: underline;
@@ -259,4 +266,8 @@ ul.no-bullets {
 
 #pullDownBackground {
   background-image: url('./images/background6.png')
+}
+
+.no-bullets {
+  list-style-type: none;
 }
