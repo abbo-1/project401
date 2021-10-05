@@ -160,6 +160,15 @@ function HUD(props) {
       );
   }
 
+    // FOR LEGEND
+    const listy = (legend) => (
+    
+      <div className="legend">
+      <Legend />
+      </div>
+  
+    )
+
     return (
         <div>
 
@@ -221,7 +230,7 @@ function HUD(props) {
 
 
             <div id="lowerLeftCorner">
-                <button id="legendBtn">
+                <button onClick="listy" id="legendBtn">
                     LEGEND
                 </button>
             
