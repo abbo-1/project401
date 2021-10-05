@@ -248,7 +248,7 @@ ul.no-bullets {
 
 .MuiDrawer-paper {
   width: 100% !important;
-  height: 60% !important;
+  height: 70% !important;
 }
 
 #pullDownTxt {
@@ -266,7 +266,7 @@ ul.no-bullets {
 }
 
 #topMargin {
-  margin-top: 15px;
+  margin-top: 7px;
   text-decoration: underline;
 }
 
@@ -283,4 +283,6 @@ ul.no-bullets {
   border-style: double;
   margin-bottom: 15px;
   padding: 15px;
+  display: flex;
+  align-items: center;
 }
