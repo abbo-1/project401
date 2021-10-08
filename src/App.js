@@ -52,13 +52,13 @@ function App(props) {
 
 
   // FOR LEGEND
-  const listy = (legend) => (
+  // const listy = (legend) => (
     
-    <div className="legend">
-    <Legend />
-    </div>
+  //   <div className="legend">
+  //   <Legend />
+  //   </div>
 
-  )
+  // )
 
   //BACKGROUND & TIME STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
