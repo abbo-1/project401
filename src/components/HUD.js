@@ -228,32 +228,32 @@ function HUD(props) {
             {/* <div className="dateTimeDiv">
                 {timeDate}
             </div>  */}
-
-            <div>
+   
+            <div id="lowerLeftCorner">
             {[' '].map((legend) => (
               <React.Fragment key={legend}>
-                <KeyboardArrowUpIcon onClick={toggleDrawer(legend, true)}>{legend}</KeyboardArrowUpIcon>
-                   <Drawer legend={legend}
+                <button id="legendBtn" onClick={toggleDrawer(legend, true)}>LEGEND</button>
+                   {/* <Drawer legend={legend}
                     open={state[legend]}
                     onClose={toggleDrawer(legend, false)}
                     onOpen={toggleDrawer(legend, true)}>
                     {listy(legend)}
-                    </Drawer>
+                    </Drawer> */}
               </React.Fragment>
              ))}
             </div>
 
-            <div id="lowerLeftCorner">
+            {/* <div id="lowerLeftCorner">
                 <button onClick="listy" id="legendBtn">
                     LEGEND
-                </button>
+                </button> */}
             
-                <button id="lifeboatBtn">
+                {/* <button id="lifeboatBtn">
                     DEMOGRAPHICS
                 </button>
-            </div>
+            </div> */}
 
-            {/* <Visualizer id="legendBtn"/> */}
+            // {/* <Visualizer id="legendBtn"/> */}
 
         </div>
     )
