@@ -10,6 +10,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 
 import titanic from '../images/titanic2.png';
 import titanic1140 from '../images/titanic1140.png';
+import Legend from '../components/Legend'
 
 import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 import FormControlLabel from '@material-ui/core/FormControlLabel';
@@ -20,6 +21,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Drawer from '@material-ui/core/Drawer';
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
 import { withStyles } from '@material-ui/core/styles';
 import { green } from '@material-ui/core/colors';
@@ -161,8 +163,7 @@ function HUD(props) {
   }
 
     // FOR LEGEND
-    const listy = (legend) => (
-    
+    const listy = (Legend) => (
       <div className="legend">
       <Legend />
       </div>
@@ -228,6 +229,19 @@ function HUD(props) {
                 {timeDate}
             </div>  */}
 
+            <div>
+            {[' '].map((legend) => (
+              <React.Fragment key={legend}>
+                <KeyboardArrowUpIcon onClick={toggleDrawer(legend, true)}>{legend}</KeyboardArrowUpIcon>
+                   <Drawer legend={legend}
+                    open={state[legend]}
+                    onClose={toggleDrawer(legend, false)}
+                    onOpen={toggleDrawer(legend, true)}>
+                    {listy(legend)}
+                    </Drawer>
+              </React.Fragment>
+             ))}
+            </div>
 
             <div id="lowerLeftCorner">
                 <button onClick="listy" id="legendBtn">
