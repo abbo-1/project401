@@ -161,7 +161,7 @@ function HUD(props) {
       </div>
       );
   }
-
+////////////////////////////////////////////////////////////////////////////////
     // FOR LEGEND
     // const listy = (Legend) => (
     //   <div className="legend">
@@ -170,7 +170,7 @@ function HUD(props) {
   
     // )
 
-  const [state, setState] = React.useState({
+  const [legendState, setLegendState] = React.useState({
     top: false,
   });
 
@@ -179,25 +179,16 @@ function HUD(props) {
       return;
     }
 
-    setState({ ...state, [legend]: open });
+    setLegendState({ ...legendState, [legend]: open });
   };
-
-  const useStyles = makeStyles({
-    list: {
-      width: 250,
-    },
-    fullList: {
-      width: 'auto',
-    },
-  });
   
   // DRAWER LEGEND INARDS
-  const list = (legend) => (
+  const legendDisplay = (legend) => (
 
     <div
       role="presentation"
-      onClick={toggleLegendDrawer(legend, false)}
-      onKeyDown={toggleLegendDrawer(legend, false)}
+      onClick={toggleLegendDrawer(legendState, false)}
+      onKeyDown={toggleLegendDrawer(legendState, false)}
       id="pullDownBackground"
       // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
     >
@@ -271,12 +262,14 @@ function HUD(props) {
             {[' '].map((legend) => (
               <React.Fragment key={legend}>
                 <button id="legendBtn" onClick={toggleLegendDrawer(legend, true)}>LEGEND</button>
-                   {/* <Drawer legend={legend}
-                    open={state[legend]}
-                    onClose={toggleDrawer(legend, false)}
-                    onOpen={toggleDrawer(legend, true)}>
-                    {listy(legend)}
-                    </Drawer> */}
+                   <Drawer legend={legend}
+                    open={legend[legend]}
+                    onClose={toggleLegendDrawer(legend, false)}
+                    onOpen={toggleLegendDrawer(legend, true)}>
+                    {legendDisplay(legend)}
+                    </Drawer>
+
+                    
               </React.Fragment>
              ))}
             </div>
