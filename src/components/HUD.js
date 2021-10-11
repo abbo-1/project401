@@ -163,12 +163,50 @@ function HUD(props) {
   }
 
     // FOR LEGEND
-    const listy = (Legend) => (
-      <div className="legend">
-      <Legend />
-      </div>
+    // const listy = (Legend) => (
+    //   <div className="legend">
+    //   <Legend />
+    //   </div>
   
-    )
+    // )
+
+  const [state, setState] = React.useState({
+    top: false,
+  });
+
+  const toggleLegendDrawer = (legend, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [legend]: open });
+  };
+
+  const useStyles = makeStyles({
+    list: {
+      width: 250,
+    },
+    fullList: {
+      width: 'auto',
+    },
+  });
+  
+  // DRAWER LEGEND INARDS
+  const list = (legend) => (
+
+    <div
+      role="presentation"
+      onClick={toggleLegendDrawer(legend, false)}
+      onKeyDown={toggleLegendDrawer(legend, false)}
+      id="pullDownBackground"
+      // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
+    >
+      <Legend />
+        
+        </div>
+
+  )
+
 
     return (
         <div>
@@ -232,7 +270,7 @@ function HUD(props) {
             <div id="lowerLeftCorner">
             {[' '].map((legend) => (
               <React.Fragment key={legend}>
-                <button id="legendBtn" onClick={toggleDrawer(legend, true)}>LEGEND</button>
+                <button id="legendBtn" onClick={toggleLegendDrawer(legend, true)}>LEGEND</button>
                    {/* <Drawer legend={legend}
                     open={state[legend]}
                     onClose={toggleDrawer(legend, false)}

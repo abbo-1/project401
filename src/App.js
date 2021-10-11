@@ -60,6 +60,7 @@ function App(props) {
 
   // )
 
+  
   //BACKGROUND & TIME STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
   const [timeDate, setTimeDate] = useState("")
