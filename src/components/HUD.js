@@ -170,33 +170,20 @@ function HUD(props) {
   
     // )
 
-  const [legendState, setLegendState] = React.useState({
-    top: false,
-  });
-
-  const toggleLegendDrawer = (legend, open) => (event) => {
-    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
-      return;
-    }
-
-    setLegendState({ ...legendState, [legend]: open });
-  };
+  // const [legendState, setLegendState] = React.useState({
+  //   top: false,
+  // });
   
-  // DRAWER LEGEND INARDS
-  const legendDisplay = (legend) => (
+const useModal = () => {
+  const [visible, setVisible] = useState(false);
+  function toggleLegend() {
+    setVisible(!visible);    
+  }
+  return {toggleLegend, visible}
+};
 
-    <div
-      role="presentation"
-      onClick={toggleLegendDrawer(legendState, false)}
-      onKeyDown={toggleLegendDrawer(legendState, false)}
-      id="pullDownBackground"
-      // class="MuiPaper-root MuiDrawer-paper MuiDrawer-paperAnchorTop MuiPaper-elevation16"
-    >
-      <Legend />
-        
-        </div>
+  const {toggleLegend, visible} = useModal();
 
-  )
 
 
     return (
@@ -259,19 +246,7 @@ function HUD(props) {
             </div>  */}
    
             <div id="lowerLeftCorner">
-            {[' '].map((legend) => (
-              <React.Fragment key={legend}>
-                <button id="legendBtn" onClick={toggleLegendDrawer(legend, true)}>LEGEND</button>
-                   <Drawer legend={legend}
-                    open={legend[legend]}
-                    onClose={toggleLegendDrawer(legend, false)}
-                    onOpen={toggleLegendDrawer(legend, true)}>
-                    {legendDisplay(legend)}
-                    </Drawer>
-
-                    
-              </React.Fragment>
-             ))}
+                <button id="legendBtn" onClick={toggleLegend}>LEGEND</button>
             </div>
 
             {/* <div id="lowerLeftCorner">
@@ -285,6 +260,15 @@ function HUD(props) {
             </div> */}
 
             // {/* <Visualizer id="legendBtn"/> */}
+            
+            <div 
+            className="legend"
+            visible={visible} 
+            toggleLegend={toggleLegend}
+            >
+            <Legend />
+            </div>
+            
 
         </div>
     )
