@@ -8,9 +8,9 @@ import officer from '../images/people/officer.png';
 import crew from '../images/people/crew.png';
 
 
-const Legend = ({ visible, toggleLegend }) => visible ? ReactDOM.createPortal (
+const Legend = () => (
 
-    <div>
+    <div className="legend">
 
         LEGEND
 
@@ -28,9 +28,11 @@ const Legend = ({ visible, toggleLegend }) => visible ? ReactDOM.createPortal (
 
             <img src={thirdclass} /> 
             Orange circles represent a first class passenger.
+{/* 
+            <button type="button" onClick={toggle}>Close</button> */}
 
     </div>
-    ) : null;
+    ) 
 
 
 export default Legend

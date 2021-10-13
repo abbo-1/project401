@@ -174,17 +174,18 @@ function HUD(props) {
   //   top: false,
   // });
   
-const useModal = () => {
-  const [visible, setVisible] = useState(false);
-  function toggleLegend() {
-    setVisible(!visible);    
-  }
-  return {toggleLegend, visible}
-};
+  // const useModal = () => {
+  //   const [visible, setVisible] = useState(false);
 
-  const {toggleLegend, visible} = useModal();
+  //   function toggle() {
+  //     setVisible(!visible);    
+  //   }
+  //   return {toggle, visible}
+  // };
 
+  // const {toggle, visible} = useModal();
 
+  const [showLegend, setLegendOff] = useState(false);
 
     return (
         <div>
@@ -246,7 +247,7 @@ const useModal = () => {
             </div>  */}
    
             <div id="lowerLeftCorner">
-                <button id="legendBtn" onClick={toggleLegend}>LEGEND</button>
+                <button id="legendBtn" onClick={() => setLegendOff(true)}>LEGEND</button>
             </div>
 
             {/* <div id="lowerLeftCorner">
@@ -261,13 +262,10 @@ const useModal = () => {
 
             // {/* <Visualizer id="legendBtn"/> */}
             
-            <div 
-            className="legend"
-            visible={visible} 
-            toggleLegend={toggleLegend}
-            >
+      {showLegend ? (
             <Legend />
-            </div>
+      ): false}
+
             
 
         </div>
