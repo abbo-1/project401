@@ -14,7 +14,7 @@ return(
 
     <div>
 
-        LEGEND
+        <h3>LEGEND</h3>
 
             <img src={officer} /> 
             Purple circles represent an officer.

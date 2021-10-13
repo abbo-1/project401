@@ -154,12 +154,29 @@ ul.no-bullets {
 /* LEGEND */
 
 .legend {
-  position: sticky !important;
+  /* position: sticky !important;
   font-size: 1.5rem;
   margin-right: 1%;
   margin-bottom: 1%;
   bottom: 0;
-  right: 0;
+  right: 0; */
+  color: white;
+  background-color: #282c34;
+  border-style: double;
+  border-color: #DBB13B;
+  font-size: 1.2em;
+  border-radius: 8px;
+  max-width: 60vw;
+  padding: 1%;
+  text-align: center;
+  justify-content: center;
+  opacity: 0.95;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
 }
 
 /* #legendBtnDiv {
