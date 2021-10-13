@@ -34,11 +34,14 @@ import Row from 'react-bootstrap/Row'
 
 function HUD(props) {
 
-      // FOR WELCOME MESSAGE
+    // FOR WELCOME MESSAGE
   const [showMessage, setMessageOff] = useState(true);
 
+  // FOR LEGEND
+  const [showLegend, setLegendOff] = useState(false);
+
     // FOR DRAWER PULL DOWN
-  const [state, setState] = React.useState({
+  const [state, setState] = useState({
     top: false,
   });
 
@@ -140,7 +143,7 @@ function HUD(props) {
     checked: {},
   })((props) => <Radio color="default" {...props} />);
 
-  const [selectedValue, setSelectedValue] = React.useState('a');
+  const [selectedValue, setSelectedValue] = useState('a');
 
   const handleChange = (event) => {
    setSelectedValue(event.target.value);
@@ -148,6 +151,7 @@ function HUD(props) {
 
   //BACKGROUND & TIME STATE
   const [map, setMap] = useState(<img src={titanic} id="shipLayout" alt="ship blueprint"/>)
+
   const [timeDate, setTimeDate] = useState("")
 
   function handleClick () {
@@ -161,31 +165,6 @@ function HUD(props) {
       </div>
       );
   }
-////////////////////////////////////////////////////////////////////////////////
-    // FOR LEGEND
-    // const listy = (Legend) => (
-    //   <div className="legend">
-    //   <Legend />
-    //   </div>
-  
-    // )
-
-  // const [legendState, setLegendState] = React.useState({
-  //   top: false,
-  // });
-  
-  // const useModal = () => {
-  //   const [visible, setVisible] = useState(false);
-
-  //   function toggle() {
-  //     setVisible(!visible);    
-  //   }
-  //   return {toggle, visible}
-  // };
-
-  // const {toggle, visible} = useModal();
-
-  const [showLegend, setLegendOff] = useState(false);
 
     return (
         <div>
@@ -247,23 +226,18 @@ function HUD(props) {
             </div>  */}
    
             <div id="lowerLeftCorner">
-                <button id="legendBtn" onClick={() => setLegendOff(true)}>LEGEND</button>
+                <button id="legendBtn" onClick={() => setLegendOff(!showLegend)}>LEGEND</button>
             </div>
 
-            {/* <div id="lowerLeftCorner">
-                <button onClick="listy" id="legendBtn">
-                    LEGEND
-                </button> */}
-            
                 {/* <button id="lifeboatBtn">
                     DEMOGRAPHICS
                 </button>
             </div> */}
 
-            // {/* <Visualizer id="legendBtn"/> */}
-            
       {showLegend ? (
+        <div className="legend">
             <Legend />
+        </div>
       ): false}
 
             
@@ -273,4 +247,3 @@ function HUD(props) {
 }
 
 export default HUD
-

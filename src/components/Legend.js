@@ -8,9 +8,11 @@ import officer from '../images/people/officer.png';
 import crew from '../images/people/crew.png';
 
 
-const Legend = () => (
+function Legend() {
 
-    <div className="legend">
+return(
+
+    <div>
 
         LEGEND
 
@@ -32,7 +34,7 @@ const Legend = () => (
             <button type="button" onClick={toggle}>Close</button> */}
 
     </div>
-    ) 
+    ) }
 
 
 export default Legend
