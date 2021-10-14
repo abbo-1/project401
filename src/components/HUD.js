@@ -236,7 +236,7 @@ function HUD(props) {
 
       {showLegend ? (
         <div className="legend">
-            <Legend />
+            <Legend setLegendOff={setLegendOff} showLegend={showLegend} />
         </div>
       ): false}
 

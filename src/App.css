@@ -166,17 +166,21 @@ ul.no-bullets {
   border-color: #DBB13B;
   font-size: 1.2em;
   border-radius: 8px;
-  max-width: 60vw;
-  padding: 1%;
+  /* max-width: 50vw; */
+  padding: 3%;
   text-align: center;
   justify-content: center;
   opacity: 0.95;
 
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0px; 
+  right: 0px; 
   z-index: 3;
+}
+
+#legendContent {
+  text-align: center;
+  justify-content: center;
 }
 
 /* #legendBtnDiv {
@@ -205,6 +209,26 @@ ul.no-bullets {
 #legendBtn:hover {
   cursor: pointer;
   border: 3px solid #DBB13B !important;
+}
+
+.legendClose {
+  text-align: center;
+  display: inline-block;
+  font-size: 1em;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #FD0000;
+  background-color: white;
+  color: black;
+
+  padding: 5px 10px;
+  margin: 4px 2px;
+}
+
+.legendClose:hover {
+  background-color: #FD0000;
+  color: white;
 }
 
 /* LEGEND & DEMOGRAPHIC BUTTON POSITIONING */
