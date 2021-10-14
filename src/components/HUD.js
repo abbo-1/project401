@@ -40,6 +40,10 @@ function HUD(props) {
   // FOR LEGEND
   const [showLegend, setLegendOff] = useState(false);
 
+  function turnOff() {
+     setLegendOff(!showLegend)
+  }
+
     // FOR DRAWER PULL DOWN
   const [state, setState] = useState({
     top: false,
@@ -236,7 +240,7 @@ function HUD(props) {
 
       {showLegend ? (
         <div className="legend">
-            <Legend setLegendOff={setLegendOff} showLegend={showLegend} />
+            <Legend />
         </div>
       ): false}
 

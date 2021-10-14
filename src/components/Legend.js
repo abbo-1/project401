@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import ReactDOM from "react-dom";
 
 import Col from 'react-bootstrap/Col'
@@ -12,7 +12,7 @@ import officer from '../images/people/officer.png';
 import crew from '../images/people/crew.png';
 
 
-function Legend(setLegendOff, showLegend) {
+function Legend() {
 
 return(
 
@@ -42,7 +42,7 @@ return(
             </Row>
                 
 
-            <button type="button" class="legendClose" onClick={() => setLegendOff(!showLegend)}>Close</button>
+            <button type="button" class="legendClose" onClick={console.log("ello")}>Close</button>
 
     </div>
     ) }
