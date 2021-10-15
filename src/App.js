@@ -37,11 +37,19 @@ import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 // import FormLabel from '@material-ui/core/FormLabel';
 // import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
+import { useSelector } from "react-redux"
+
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
 
 
 function App(props) {
+  //FOR REDUX
+  const state = useSelector(
+    (state) => state
+  )
+
+  console.log("BIG UPS  " + state)
 
   //FOR LOADING GIF
   const [loading, setLoading] = useState(true)
