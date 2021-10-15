@@ -22,23 +22,28 @@ return(
         </Row>
             <Row className="m-auto">
             <img src={officer} /> 
-            Purple circles represent an officer.
+            {/* Purple circles represent an officer. */}
+            = An Officer
             </Row>
             <Row className="m-auto">
             <img src={crew} /> 
-            Blue circles represent a crew member.
+            {/* Blue circles represent a crew member. */}
+            = A Crew Member
             </Row>
-            <Row className="m-auto">
+            <Row className="m-auto align-self-center">
             <img src={firstclass} /> 
-            Yellow circles represent a first class passenger.
+            {/* Yellow circles represent a first class passenger. */}
+            = A First Class Passenger
             </Row>
             <Row className="m-auto">
             <img src={secondclass} /> 
-            Pink circles represent a first class passenger.
+            {/* Pink circles represent a first class passenger. */}
+            = A Second Class Passenger
             </Row>
             <Row className="m-auto">
             <img src={thirdclass} /> 
-            Orange circles represent a first class passenger.
+            {/* Orange circles represent a first class passenger. */}
+            = A Third Class Passenger
             </Row>
                 
 
