@@ -37,7 +37,10 @@ import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 // import FormLabel from '@material-ui/core/FormLabel';
 // import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
 
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { bindActionCreators } from "redux"
+import * as actionCreators  from "./store/actions/action-creator.js"
+// import {updateInfoEleven40} from "./store/actions/action-creator.js"
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
@@ -45,11 +48,15 @@ import titanic1140 from './images/titanic1140.png';
 
 function App(props) {
   //FOR REDUX
-  const state = useSelector(
-    (state) => state
+  const info = useSelector(
+    (state) => state.info
   )
 
-  console.log("BIG UPS  " + state)
+  const dispatch = useDispatch()
+
+  const { updateInfoEleven40, updateInfoEleven45 } = bindActionCreators(actionCreators, dispatch)
+
+  console.log("moordi  " + updateInfoEleven40)
 
   //FOR LOADING GIF
   const [loading, setLoading] = useState(true)
