@@ -39,8 +39,11 @@ import { TransformWrapper, TransformComponent} from "react-zoom-pan-pinch";
 
 import { useSelector, useDispatch } from "react-redux"
 import { bindActionCreators } from "redux"
+
 import * as actionCreators  from "./store/actions/action-creator.js"
 // import {updateInfoEleven40} from "./store/actions/action-creator.js"
+
+// import { actionCreators } from "./store/actionCreatorIndex.js"
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
@@ -56,7 +59,7 @@ function App(props) {
 
   const { updateInfoEleven40, updateInfoEleven45 } = bindActionCreators(actionCreators, dispatch)
 
-  console.log("moordi  " + updateInfoEleven40)
+  console.log("moordi  " + updateInfoEleven45)
 
   //FOR LOADING GIF
   const [loading, setLoading] = useState(true)

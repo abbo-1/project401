@@ -1,6 +1,4 @@
-
-
-const updateInfoEleven40 = (info) => {
+export const updateInfoEleven40 = (info) => {
     return (dispatch) => {
         dispatch({
             type: "eleven40",
@@ -9,7 +7,7 @@ const updateInfoEleven40 = (info) => {
     }
 }
 
-const updateInfoEleven45 = (info) => {
+export const updateInfoEleven45 = (info) => {
     return (dispatch) => {
         dispatch({
             type: "eleven45",
