@@ -1,16 +1,21 @@
-// import {createStore, applyMiddleware} from "redux"
-// import reducers from "./reducers/reducerIndex.js"
-// import thunk from "redux-thunk"
+import React, { createContext, useContext, useReducer } from 'react';
 
-// export const store = createStore(
-//     reducers,
-//     {},
-//     applyMiddleware(thunk)
-// )
+const StoreContext = createContext();
+const initialState = {layout = <img src={titanic} id="shipLayout" alt="ship blueprint"/> }
 
-import { createStore, combineReducers } from "redux";
-import mainAppReducer from "./reducers/reducers.js"
-
-const reducers = combineReducers({ mainAppReducer });
-
-export default createStore(reducers);
+const reducer = (state, action) => {
+    switch(action.type) {
+        case "elevenForty":
+            return {
+                map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                time: "11:40 pm",
+                date: "April 14th, 1912"                
+            }
+        case "elevenFifty":
+            return {
+                 map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                time: "11:50 pm",
+                date: "April 14th, 1912"                
+            }
+    }
+}

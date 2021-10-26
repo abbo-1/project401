@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useReducer } from 'react';
 
 import Visualizer from './Visualizer.js'
 
@@ -34,7 +34,7 @@ import Row from 'react-bootstrap/Row'
 
 function HUD(props) {
 
-    // FOR WELCOME MESSAGE
+  // FOR WELCOME MESSAGE
   const [showMessage, setMessageOff] = useState(true);
 
   // FOR LEGEND
@@ -44,7 +44,7 @@ function HUD(props) {
      setLegendOff(!showLegend)
   }
 
-    // FOR DRAWER PULL DOWN
+  // FOR DRAWER PULL DOWN
   const [state, setState] = useState({
     top: false,
   });
