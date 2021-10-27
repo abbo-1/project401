@@ -17,5 +17,11 @@ const reducer = (state, action) => {
                 time: "11:50 pm",
                 date: "April 14th, 1912"                
             }
+        case "midnight":
+            return {
+                map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                time: "12:00 am",
+                date: "April 15th, 1912"                
+            }
     }
 }
