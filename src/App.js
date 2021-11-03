@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ShipContext } from './contexts/shipContext.js'
+import ShipContext from './contexts/shipContext.js'
 import './App.css';
 
 import LoadingGif from './images/loading.gif'
