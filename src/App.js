@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { ShipContext } from './contexts/shipContext.js'
 import './App.css';
 
 import LoadingGif from './images/loading.gif'
@@ -44,6 +45,8 @@ import * as actionCreators  from "./store/actions/action-creator.js"
 // import {updateInfoEleven40} from "./store/actions/action-creator.js"
 
 // import { actionCreators } from "./store/actionCreatorIndex.js"
+
+
 
 import titanic from './images/titanic2.png';
 import titanic1140 from './images/titanic1140.png';
@@ -100,13 +103,11 @@ function App(props) {
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <TransformComponent> */}
         {/* <HUD props={zoomIn, zoomOut, resetTransform} /> */}
+        <ShipContext.Provider value={ time, date }>
+
         <HUD />
-
-
         <ScrollContainer className="scroll-container">
-     
         {map}
-
         <button onclick={() => updateInfoEleven40}>CLICK 40</button>
         <button>Click 45</button>
         {/* <button onClick={props.displayPassengers}
@@ -119,8 +120,8 @@ function App(props) {
         </div> */}
 {/* 
         <Visualizer class="lifeboatBtn"/> */}
-
       </ScrollContainer>
+      </ShipContext.Provider>
       {/* </TransformComponent>
       )}
       </TransformWrapper> */}
