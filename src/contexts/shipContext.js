@@ -1,13 +1,31 @@
-import React, { useState, useContext } from "react"
+import React, { useState, createContext } from "react"
 
-function ShipContext() {
-    switch() {
-    case "elevenForty":
-        return {
-                map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
-                time: "11:40 pm",
-                date: "April 14th, 1912"                
-        }
+function ShipContext( timePoint ) {
+    timePoint.map(cases => {
+        switch ( cases.exactTime ) {
+            case "elevenForty":
+                this.setState ({
+                    map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                    time: "11:40 pm",
+                    date: "April 14th, 1912"                
+                });
+                break;
+            case "elevenFifty":
+                this.setState ({
+                    map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                    time: "11:50 pm",
+                    date: "April 14th, 1912"                
+                });
+                break;
+            default:
+                this.setState ({
+                    map: {layout = <img src={titanic} id="shipLayout" alt="ship blueprint"/> },
+                    time: "",
+                    date: ""                
+                });
+                break;
+
+
     }
 
     return (
@@ -17,7 +35,7 @@ function ShipContext() {
     )
 }
 
-export default ShipContext;
+export default ShipContext = createContext;
 
 
 
