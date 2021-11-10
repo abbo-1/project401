@@ -17,6 +17,13 @@ function ShipContext( timePoint ) {
                     date: "April 14th, 1912"                
                 });
                 break;
+            case "elevenFifty":
+                this.setState ({
+                    map: {layout = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/> },
+                    time: "12:10 am",
+                    date: "April 15th, 1912"                
+                });
+                break;
             default:
                 this.setState ({
                     map: {layout = <img src={titanic} id="shipLayout" alt="ship blueprint"/> },
