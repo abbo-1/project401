@@ -103,13 +103,13 @@ function App(props) {
       {({ zoomIn, zoomOut, resetTransform, ...rest }) => (
         <TransformComponent> */}
         {/* <HUD props={zoomIn, zoomOut, resetTransform} /> */}
-        <ShipContext.Provider value={ time, date }>
-
-        <HUD />
+        {/* <ShipContext.Provider value={ time, date }> */}
+        <ShipContext />
+        {/* <HUD /> */}
         <ScrollContainer className="scroll-container">
         {map}
         <button onclick={() => updateInfoEleven40}>CLICK 40</button>
-        <button>Click 45</button>
+        <button>Click 12</button>
         {/* <button onClick={props.displayPassengers}
         class="lifeboatBtn">
         SHIP DEMOGRAPHICS
@@ -121,7 +121,7 @@ function App(props) {
 {/* 
         <Visualizer class="lifeboatBtn"/> */}
       </ScrollContainer>
-      </ShipContext.Provider>
+      {/* </ShipContext.Provider> */}
       {/* </TransformComponent>
       )}
       </TransformWrapper> */}

@@ -1,7 +1,7 @@
 import React, { useState, createContext } from "react"
+import HUD from '../components/HUD'
 
 function ShipContext( timePoint ) {
-    timePoint.map(cases => {
         switch ( cases.exactTime ) {
             case "elevenForty":
                 this.setState ({
@@ -37,12 +37,12 @@ function ShipContext( timePoint ) {
 
     return (
         <>
-        
+        <HUD />
         </>
     )
 }
 
-export default ShipContext = createContext;
+export default ShipContext
 
 
 
