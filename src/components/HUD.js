@@ -168,6 +168,7 @@ function HUD(props) {
         <div className="dateTime">April 14th, 1912</div>
       </div>
       );
+      console.log("help help katie" + props.shipStuff)
   }
 
     return (
