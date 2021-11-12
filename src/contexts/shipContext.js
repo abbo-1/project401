@@ -14,13 +14,13 @@ function ShipContext(scale) {
                 )                
             case "elevenFifty":
                 return (
-                    map = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/>,
+                    map = <img src={titanic1150} id="shipLayout" alt="ship blueprint"/>,
                     time = "11:50 pm",
                     date = "April 14th, 1912"                
                 )
-            case "elevenFiftyTwo":
+            case "twelveTen":
                 return (
-                    map = <img src={titanic1140} id="shipLayout" alt="ship blueprint"/>,
+                    map = <img src={titanic1210} id="shipLayout" alt="ship blueprint"/>,
                     time = "12:10 am",
                     date = "April 15th, 1912"                
                 )
