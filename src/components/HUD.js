@@ -78,10 +78,6 @@ function HUD(props) {
     >
 
         <div id="pullDownTxt">
-{/* 
-          <div id="topMargin">
-            Titanic
-          </div> */}
         
           <div id="topMargin">
             April 14th-15th 1912
@@ -174,7 +170,7 @@ function HUD(props) {
     return (
         <div>
 
-                  {/* {({ zoomIn, zoomOut, resetTransform, ...rest }) => ( */}
+        {/* {({ zoomIn, zoomOut, resetTransform, ...rest }) => ( */}
 
         {/* <div id="zoomBtnsDiv"> */}
           {/* <ZoomInIcon className="zoomBtns" onClick={props.zoomIn}/>
