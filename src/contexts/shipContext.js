@@ -50,6 +50,12 @@ function ShipContext(scale) {
             time = "12:10 am",
             date = "April 15th, 1912"                  
             ) 
+        } else if (time === "twelveTen") {
+        return (
+            map = <img src={titanic1210} id="shipLayout" alt="ship blueprint"/>,
+            time = "12:20 am",
+            date = "April 15th, 1912"                  
+            ) 
         } else {
         return (
             map = <img src={titanic} id="shipLayout" alt="ship blueprint"/>,
