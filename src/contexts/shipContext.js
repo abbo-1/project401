@@ -72,3 +72,33 @@ function ShipContext(scale) {
 }
 
 export default ShipContext
+
+
+// const handleRender = (e, props) => {
+//     let exp = Math.floor(Math.random() * props);
+//     console.log(exp);
+//     return exp;
+//   };
+//   function Test(exp) {
+//     switch (exp) {
+//       case 1:
+//         return <One />;
+//       case 2:
+//         return <Two />;
+//       case 3:
+//         return <Three />;
+//       default:
+//         return <None />;
+//     }
+//   }
+//   function App() {
+//     const [exp, setExp] = useState(0);
+//     return (
+//       <div className="App">
+//         <button onClick={() => setExp(handleRender('a', '5'))}>
+//           Render One Two or Three
+//         </button>
+//         {Test(exp)}
+//       </div>
+//     );
+//   }
