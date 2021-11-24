@@ -72,33 +72,43 @@ function ShipContext(scale) {
 }
 
 export default ShipContext
+import React, { useState } from "react";
 
+// Your other imports.
 
-// const handleRender = (e, props) => {
-//     let exp = Math.floor(Math.random() * props);
-//     console.log(exp);
-//     return exp;
-//   };
-//   function Test(exp) {
-//     switch (exp) {
-//       case 1:
-//         return <One />;
-//       case 2:
-//         return <Two />;
-//       case 3:
-//         return <Three />;
-//       default:
-//         return <None />;
-//     }
-//   }
-//   function App() {
-//     const [exp, setExp] = useState(0);
-//     return (
-//       <div className="App">
-//         <button onClick={() => setExp(handleRender('a', '5'))}>
-//           Render One Two or Three
-//         </button>
-//         {Test(exp)}
-//       </div>
-//     );
-//   }
+function Test(exp) {
+  switch (exp) {
+    case 1:
+      return <One />;
+    case 2:
+      return <Two />;
+    case 3:
+      return <Three />;
+    default:
+      return <None />;
+  }
+}
+
+// this would be to generate a random component
+// function randomIntFromInterval(min, max) {
+//   return Math.floor(Math.random()*(max-min+1)+min);
+// }
+
+// function App() {
+//   const [renderedComponent, setRenderedComponent] = useState(0);
+//   return (
+//     <div className="App">
+//       <h1>Hello CodeSandbox</h1>
+//       <h2>Start editing to see some magic happen!</h2>
+//       // If you want a button for a particular component, you can
+//       // put in that number 1,2,3 instead of the call to randomIntFromInterval
+//       <button onClick={() => setRenderedComponent(randomIntFromInterval(1, 3))}>
+//         Render One Two or Three
+//       </button>
+//       {renderedComponent !== 0 && <Test />}
+//     </div>
+//   );
+// }
+
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
