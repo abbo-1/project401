@@ -88,27 +88,3 @@ function Test(exp) {
       return <None />;
   }
 }
-
-// this would be to generate a random component
-// function randomIntFromInterval(min, max) {
-//   return Math.floor(Math.random()*(max-min+1)+min);
-// }
-
-// function App() {
-//   const [renderedComponent, setRenderedComponent] = useState(0);
-//   return (
-//     <div className="App">
-//       <h1>Hello CodeSandbox</h1>
-//       <h2>Start editing to see some magic happen!</h2>
-//       // If you want a button for a particular component, you can
-//       // put in that number 1,2,3 instead of the call to randomIntFromInterval
-//       <button onClick={() => setRenderedComponent(randomIntFromInterval(1, 3))}>
-//         Render One Two or Three
-//       </button>
-//       {renderedComponent !== 0 && <Test />}
-//     </div>
-//   );
-// }
-
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);
